@@ -1,5 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
-const RequestHelper = require("../helpers/request_helper.js");
+const RequestHelper = require("../helpers/request.js");
 
 const GuessWho = function(url){
   this.url = url;
@@ -23,18 +23,19 @@ GuessWho.prototype.getData = function () {
   .then((gameData) => {
     this.gameData = gameData;
     const questions = this.getAllQuestions();
-    this.allQuestions = questions
+    this.allQuestions = questions;
     const characters = this.getAllCharacters();
-    this.characters = characters
-  }
+    this.characters = characters;
+  };
     PubSub.publish("GuessWho:all-questions-ready", questions);
     PubSub.publish("Guesswho:character-data-ready", characters);
     const hiddenCard = this.getHiddenCard(); // where will I be?
-    this.hiddenCard = hiddenCard
+    this.hiddenCard = hiddenCard;
   })
   .catch(error) => {
-    PubSub.publish("GuessWho:error", err);
-  }
+    PubSub.publish("GuessWho:error", err);//maybe not needed if below
+  }; //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
+
 };
 
 GuessWho.prototype.getResult = function (questionId) {
@@ -44,18 +45,19 @@ GuessWho.prototype.getResult = function (questionId) {
 };
 
 GuessWho.prototype.getCardsToEliminate = function (questionId) {
-  const cardsToEliminate = []
+  const cardsToEliminate = [];
   const selectedQuestion = this.getSelectedQuestion(questionId);
-  
-  };
+
 };
 
 GuessWho.prototype.getSelectedQuestion = function (questionId) {
-  const selectedQuestion = null
-  const questions = this.allQuestions
-  for (question in questions) {
+  const selectedQuestion = null;
+
+  const questions = this.allQuestions;
+
+  for (let question in questions) {
     if questionId === question.id;
-    selectedQuestion = question
+    selectedQuestion = question;
   };
     return selectedQuestion;
 };
