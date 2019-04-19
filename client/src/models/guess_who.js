@@ -33,9 +33,8 @@ GuessWho.prototype.getData = function () {
     this.hiddenCard = hiddenCard;
   })
   .catch(error) => {
-    PubSub.publish("GuessWho:error", err);//maybe not needed if below
+    PubSub.publish("GuessWho:error", err); //maybe not needed if below
   }; //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
-
 };
 
 GuessWho.prototype.getResult = function (questionId) {
