@@ -1,14 +1,14 @@
-const Request = function (url) {
+const RequestHelper = function (url) {
   this.url = url;
 };
 
-Request.prototype.get = function () {
+RequestHelper.prototype.get = function () {
   return fetch(this.url)
     .then( (response) => response.json() )
     .catch( (err) => console.error(err) );
 };
 
-Request.prototype.post = function (payload) {
+RequestHelper.prototype.post = function (payload) {
   return fetch(this.url, {
     method: 'POST',
     body: JSON.stringify(payload),
@@ -18,7 +18,7 @@ Request.prototype.post = function (payload) {
     .catch( (err) => console.error(err) );
 };
 
-Request.prototype.put = function (payload) {
+RequestHelper.prototype.put = function (payload) {
   return fetch(this.url, {
     method: 'PUT',
     body: JSON.stringify(payload),
@@ -28,4 +28,4 @@ Request.prototype.put = function (payload) {
     .catch( (err) => console.error(err) );
 }
 
-module.exports = Request;
+module.exports = RequestHelper;
