@@ -11,7 +11,7 @@ const GuessWho = function(url){
 };
 
 GuessWho.prototype.bindEvents = function () {
-  const hiddenCard = this.getHiddenCard();
+
   PubSub.subscribe('SelectView:question-selected', (evt) => {
     this.getResult(evt.detail);
   });
@@ -22,13 +22,19 @@ GuessWho.prototype.getData = function () {
   .get()
   .then((gameData) => {
     this.gameData = gameData;
-    this.allQuestions = gameData.questions;
-    this.characters = gameData.characters;
+    const questions = this.getAllQuestions();
+    this.allQuestions = questions
+    const characters = this.getAllCharacters();
+    this.characters = characters
   }
-    questions => {
     PubSub.publish("GuessWho:all-questions-ready", questions);
+    PubSub.publish("Guesswho:character-data-ready", characters);
+    const hiddenCard = this.getHiddenCard(); // where will I be?
+    this.hiddenCard = hiddenCard
   })
-  .catch(console.error);
+  .catch(error) => {
+    PubSub.publish("GuessWho:error", err);
+  }
 };
 
 GuessWho.prototype.getResult = function (questionId) {
@@ -39,11 +45,19 @@ GuessWho.prototype.getResult = function (questionId) {
 
 GuessWho.prototype.getCardsToEliminate = function (questionId) {
   const cardsToEliminate = []
+  const selectedQuestion = this.getSelectedQuestion(questionId);
+  
+  };
+};
+
+GuessWho.prototype.getSelectedQuestion = function (questionId) {
+  const selectedQuestion = null
   const questions = this.allQuestions
   for (question in questions) {
-    if questionId === question.id
-
+    if questionId === question.id;
+    selectedQuestion = question
   };
+    return selectedQuestion;
 };
 
 
