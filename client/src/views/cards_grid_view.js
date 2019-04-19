@@ -29,3 +29,5 @@ CardsGridView.prototype.createCards = function (card) {
   cardContainer.appendChild(characterImg); //appending the img into the container
   return cardContainer;
 };
+
+module.exports = CardsGridView;

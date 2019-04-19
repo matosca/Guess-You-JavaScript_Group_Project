@@ -35,3 +35,5 @@ SelectView.prototype.createQuestionOption = function (question, index) {
   option.value = intex; //sets the value to be whatever index the question is
   return option;
 };
+
+module.exports = SelectView;
