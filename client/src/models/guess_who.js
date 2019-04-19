@@ -7,9 +7,11 @@ const GuessWho = function(url){
   this.gameData = null;
   this.allQuestions = null;
   this.characters = null;
+  this.hiddenCard = null;
 };
 
 GuessWho.prototype.bindEvents = function () {
+  const hiddenCard = this.getHiddenCard();
   PubSub.subscribe('SelectView:question-selected', (evt) => {
     this.getResult(evt.detail);
   });
@@ -21,7 +23,7 @@ GuessWho.prototype.getData = function () {
   .then((gameData) => {
     this.gameData = gameData;
     this.allQuestions = gameData.questions;
-    this.character = gameData.characters;
+    this.characters = gameData.characters;
   }
     questions => {
     PubSub.publish("GuessWho:all-questions-ready", questions);
@@ -30,14 +32,16 @@ GuessWho.prototype.getData = function () {
 };
 
 GuessWho.prototype.getResult = function (questionId) {
-  this.getCardsToEliminate(questionId)
+  const cardsToEliminate = this.getCardsToEliminate(questionId);
+  const updatedCards = this.updateCards(cardsToEliminate);
+  PubSub.publish("GuessWho:updated-grid-view-ready", updatedCards);
 };
 
 GuessWho.prototype.getCardsToEliminate = function (questionId) {
   const cardsToEliminate = []
-  const questions =
+  const questions = this.allQuestions
   for (question in questions) {
-    if questioniD === question.id
+    if questionId === question.id
 
   };
 };
