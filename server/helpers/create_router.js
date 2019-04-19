@@ -15,4 +15,9 @@ const createRouter = function (collection) {
  });
 };
 
+router.put('/:id', (req, res) => {
+  data[req.params.id] = req.body;
+  res.json(data);
+});
+
 module.exports = createRouter;
