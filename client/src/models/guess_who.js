@@ -22,9 +22,9 @@ GuessWho.prototype.getData = function () {
   .get()
   .then((gameData) => {
     this.gameData = gameData;
-    const questions = this.getAllQuestions();
+    const questions = this.getAllQuestions(gameData);
     this.allQuestions = questions;
-    const characters = this.getAllCharacters();
+    const characters = this.getAllCharacters(gameData);
     this.characters = characters;
   };
   PubSub.publish("GuessWho:all-questions-ready", questions);
@@ -56,6 +56,19 @@ GuessWho.prototype.getCharactersToEliminate = function (relatedKey, attribute) {
     };
   };
   return charactersToEliminate;
+};
+
+
+GuessWho.prototype.getAllQuestions = function(gameData) {
+  console.log(gameData)
+  let questions = gameData.questions //go inside log and find correct route
+  return questions
+};
+
+Guesswho.prototype.getAllCharacters = function(gameData) {
+  console.log(gameData)
+  let questions = gameData.questions //go inside log and find correct route
+  return questions
 };
 
 GuessWho.prototype.getSelectedQuestion = function (questionId) {
