@@ -32,7 +32,7 @@ GuessWho.prototype.getData = function () {
   .catch( (err) => console.error(err) );
 
   // This might not go in here, although I do not understand what this bit means. Maybe in a separate function or bindEvents if we are doing something to it. Maria
-  
+
   // const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
   // this.hiddenCharacter = hiddenCharacter;
 
@@ -40,7 +40,6 @@ GuessWho.prototype.getData = function () {
   //   PubSub.publish("GuessWho:error", err));//maybe not needed if below
 }; //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
 
-};
 
 GuessWho.prototype.getResult = function (questionId) {
   const selectedQuestion = this.getSelectedQuestion(questionId);
@@ -55,7 +54,7 @@ GuessWho.prototype.getCharactersToEliminate = function (relatedKey, attribute) {
   const charactersToEliminate = [];
   const characters = this.characters;
   for (character of characters){
-    if (character.${attribute} !== this.hiddenCharacter.${attribute}) { //shouldn't this line be 'character.attribute' without interpolation
+    if (character.attribute !== this.hiddenCharacter.attribute) { //shouldn't this line be 'character.attribute' without interpolation
       charactersToEliminate.push(character);
     };
   };
