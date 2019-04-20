@@ -91,9 +91,53 @@
   !*** ./client/src/app.js ***!
   \***************************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const GuessWho = __webpack_require__(/*! ./models/guess_who.js */ \"./client/src/models/guess_who.js\");\nconst SelectView = __webpack_require__(!(function webpackMissingModule() { var e = new Error(\"Cannot find module '.views/select_view.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\nconst CardsGridView = __webpack_require__(/*! ./views/cards_grid_view.js */ \"./client/src/views/cards_grid_view.js\");\nconst GameResultView = __webpack_require__(/*! ./views/game_result_view.js */ \"./client/src/views/game_result_view.js\");\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n\n  const questionSelectForm = document.querySelector('form#select-form');\n  const selectView = new SelectView(questionSelectForm);\n  selectView.bindEvents();\n\n  const characterGridDiv = document.querySelector('div#character-grid');\n  const cardsGridView = new CardsGridView(characterGridDiv);\n  cardsGridView.bindEvents();\n\n  const url = \"http://localhost:3000\";\n  const newGame = new GuessWho(url);\n  newGame.bindEvents();\n  newGame.getData();\n  \n});\n\n\n//# sourceURL=webpack:///./client/src/app.js?");
+
+/***/ }),
+
+/***/ "./client/src/helpers/pub_sub.js":
+/*!***************************************!*\
+  !*** ./client/src/helpers/pub_sub.js ***!
+  \***************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./client/src/app.js?");
+eval("const PubSub = {\n  publish: function (channel, payload) {\n    const event = new CustomEvent(channel, {\n      detail: payload\n    });\n\n    document.dispatchEvent(event);\n  },\n\n  subscribe: function (channel, callback) {\n    document.addEventListener(channel, callback);\n  }\n};\n\nmodule.exports = PubSub;\n\n\n//# sourceURL=webpack:///./client/src/helpers/pub_sub.js?");
+
+/***/ }),
+
+/***/ "./client/src/models/guess_who.js":
+/*!****************************************!*\
+  !*** ./client/src/models/guess_who.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module parse failed: Unexpected token (29:3)\\nYou may need an appropriate loader to handle this file type.\\n|     const characters = this.getAllCharacters(gameData);\\n|     this.characters = characters;\\n>   };\\n|   PubSub.publish(\\\"GuessWho:all-questions-ready\\\", questions);\\n|   PubSub.publish(\\\"Guesswho:character-data-ready\\\", characters);\");\n\n//# sourceURL=webpack:///./client/src/models/guess_who.js?");
+
+/***/ }),
+
+/***/ "./client/src/views/cards_grid_view.js":
+/*!*********************************************!*\
+  !*** ./client/src/views/cards_grid_view.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./client/src/helpers/pub_sub.js\");\n\nconst CardsGridView = function (container) {\n  this.container = container;\n};\n\nCardsGridView.prototype.bindEvents = function () {\n  PubSub.subscribe('Guesswho:character-data-ready', (evt) => {\n    const charactersData = evt.detail;\n    this.render(charactersData);\n  });\n};\n\nCardsGridView.prototype.render = function (charactersData) {\n  charactersData.forEach( (card) => {\n    const cardContainer = this.createCards(card); //this creates every card in the format from below\n    this.container.appendChild(cardContainer); //appending each card into the main container\n  });\n};\n\n\nCardsGridView.prototype.createCards = function (card) {\n  const cardContainer = document.createElement('div'); //creating container for allocating the img\n  cardContainer.classList.add('card');\n\n  const characterImg = document.createElement('img');//creating tag img in html\n  characterImg.src = card.image_url;//setting the src to be the card's url from the database\n\n  cardContainer.appendChild(characterImg); //appending the img into the container\n  return cardContainer;\n};\n\nmodule.exports = CardsGridView;\n\n\n//# sourceURL=webpack:///./client/src/views/cards_grid_view.js?");
+
+/***/ }),
+
+/***/ "./client/src/views/game_result_view.js":
+/*!**********************************************!*\
+  !*** ./client/src/views/game_result_view.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("\n\n//# sourceURL=webpack:///./client/src/views/game_result_view.js?");
 
 /***/ })
 
