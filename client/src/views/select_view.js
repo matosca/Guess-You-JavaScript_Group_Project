@@ -32,7 +32,7 @@ SelectView.prototype.populateSelect = function (questionsData) {
 SelectView.prototype.createQuestionOption = function (question, index) {
   const option = document.createElement('option'); //creates a tag option for the select
   option.textContent = question; //sets the textContent to be a question
-  option.value = intex; //sets the value to be whatever index the question is
+  option.value = index; //sets the value to be whatever index the question is
   return option;
 };
 
