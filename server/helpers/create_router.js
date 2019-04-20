@@ -13,6 +13,14 @@ const createRouter = function (collection) {
      res.status(500);
      res.json({ status: 500, error: err});
  });
+
+ router.put ('/:id', (req, res) => {
+   const id = req.params.id;
+   const updatedStatus = req.body
+
+   collection
+   updateOne({_id: })
+ })
 };
 
 module.exports = createRouter;
