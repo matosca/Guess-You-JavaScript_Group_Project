@@ -3,6 +3,7 @@ db.dropDatabase();
 
 db.characters.insertMany(
 <<<<<<< HEAD
+<<<<<<< HEAD
 [
   {
   name: 'Anita',
@@ -150,6 +151,8 @@ db.characters.insertMany(
 }
 ]);
 =======
+=======
+>>>>>>> f6cf723f145c35291ef8ab212ca286c224466e83
   [
     {
       name: 'Anita',
@@ -297,4 +300,7 @@ db.characters.insertMany(
     }
   ]
 );
+<<<<<<< HEAD
+>>>>>>> f6cf723f145c35291ef8ab212ca286c224466e83
+=======
 >>>>>>> f6cf723f145c35291ef8ab212ca286c224466e83

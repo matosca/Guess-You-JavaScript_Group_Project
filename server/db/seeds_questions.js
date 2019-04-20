@@ -2,6 +2,7 @@ use guesswho;
 
 db.questions.insertMany(
 <<<<<<< HEAD
+<<<<<<< HEAD
 [
   {
   id: 1,
@@ -82,6 +83,8 @@ attribute: "true"
 }
 ]);
 =======
+=======
+>>>>>>> f6cf723f145c35291ef8ab212ca286c224466e83
   [
     {
       id: 0,
@@ -162,4 +165,7 @@ attribute: "true"
     }
   ]
 );
+<<<<<<< HEAD
+>>>>>>> f6cf723f145c35291ef8ab212ca286c224466e83
+=======
 >>>>>>> f6cf723f145c35291ef8ab212ca286c224466e83
