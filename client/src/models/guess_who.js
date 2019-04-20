@@ -26,14 +26,18 @@ GuessWho.prototype.getData = function () {
     this.allQuestions = questions;
     const characters = this.getAllCharacters(gameData);
     this.characters = characters;
-  };
-  PubSub.publish("GuessWho:all-questions-ready", questions);
-  PubSub.publish("Guesswho:character-data-ready", characters);
-  const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
-  this.hiddenCharacter = hiddenCharacter;
-})
-.catch(error) => {
-  PubSub.publish("GuessWho:error", err);//maybe not needed if below
+    PubSub.publish("GuessWho:all-questions-ready", questions);
+    PubSub.publish("Guesswho:character-data-ready", characters);
+  })
+  .catch( (err) => console.error(err) );
+
+  // This might not go in here, although I do not understand what this bit means. Maybe in a separate function or bindEvents if we are doing something to it. Maria
+  
+  // const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
+  // this.hiddenCharacter = hiddenCharacter;
+
+  // .catch((error) => {
+  //   PubSub.publish("GuessWho:error", err));//maybe not needed if below
 }; //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
 
 };
@@ -51,7 +55,7 @@ GuessWho.prototype.getCharactersToEliminate = function (relatedKey, attribute) {
   const charactersToEliminate = [];
   const characters = this.characters;
   for (character of characters){
-    if (character.${attribute} !== this.hiddenCharacter.${attribute}){
+    if (character.${attribute} !== this.hiddenCharacter.${attribute}) { //shouldn't this line be 'character.attribute' without interpolation
       charactersToEliminate.push(character);
     };
   };
@@ -60,15 +64,15 @@ GuessWho.prototype.getCharactersToEliminate = function (relatedKey, attribute) {
 
 
 GuessWho.prototype.getAllQuestions = function(gameData) {
-  console.log(gameData)
-  let questions = gameData.questions //go inside log and find correct route
-  return questions
+  console.log(gameData);
+  let questions = gameData.questions; //go inside log and find correct route
+  return questions;
 };
 
 Guesswho.prototype.getAllCharacters = function(gameData) {
-  console.log(gameData)
-  let questions = gameData.questions //go inside log and find correct route
-  return questions
+  console.log(gameData);
+  let questions = gameData.questions;//go inside log and find correct route
+  return questions;
 };
 
 GuessWho.prototype.getSelectedQuestion = function (questionId) {
@@ -84,14 +88,14 @@ GuessWho.prototype.getSelectedQuestion = function (questionId) {
 
 GuessWho.prototype.updateCards = function (charactersToEliminate) {
   const charactersToEliminate = charactersToEliminate;
-  const charactersInGridView = this.characters
+  const charactersInGridView = this.characters;
   for (character of charactersToEliminate){
     this.request
     .update(character.id)
     .then(remainingCharacters => this.characters = remainingCharacters);
   }
   .catch(error) => {
-    PubSub.publish("GuessWho:error", err);
+    PubSub.publish("GuessWho:error", err);  //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
   };
 };
 
