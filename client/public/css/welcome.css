@@ -1,0 +1,56 @@
+/* rgb(71, 232, 134)
+  rgb(238, 208, 9)
+  rgb(35, 182, 216)
+  rgb(20, 99, 177)
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 70em;
+  display: flex;
+  justify-content: center;
+}
+
+#welcoming h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 5em;
+  position: relative;
+  top: 5em;
+  left: 4em;
+}
+
+#welcoming a {
+  font-family: sans-serif;
+  position: relative;
+  background-color: rgb(109, 0, 202);
+  color: rgb(252,195, 9);
+  font-size: 2em;
+  top: 14em;
+  left: 13.5em;
+  border: 1px solid rgb(252,195, 9);
+  border-radius: 6px;
+  -webkit-box-shadow: 3px 2px 12px -1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 3px 2px 12px -1px rgba(0,0,0,0.5);
+  box-shadow: 3px 2px 12px -1px rgba(0,0,0,0.5);
+  padding: 10px 25px;
+  text-decoration: none;
+  -webkit-box-shadow: inset 3px 2px 12px -1px rgba(0,0,0,0.4);
+  -moz-box-shadow: inset 3px 2px 12px -1px rgba(0,0,0,0.4);
+  box-shadow: inset 3px 2px 12px -1px rgba(0,0,0,0.4);
+}
+
+#welcoming a:hover {
+  background-color: rgb(252,195, 9);
+  color: rgb(109, 0, 202);
+  border: 1px solid rgb(109, 0, 202);
+}
+
+#shape img{
+  position: relative;
+  z-index: -5000;
+}
