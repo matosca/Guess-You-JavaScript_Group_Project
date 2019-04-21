@@ -6,9 +6,8 @@
   "scripts": {
     "start": "node server/server.js",
     "server:dev": "nodemon server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -w",
-    "test": "mocha client/src/models/specs"
+    "test": "mocha client/src/models/specs",
+    "build": "webpack -w"
   },
   "repository": {
     "type": "git",

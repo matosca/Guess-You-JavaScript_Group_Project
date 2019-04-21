@@ -25,6 +25,11 @@ MongoClient.connect('mongodb://localhost:27017')
     //creating router for collection of questions
     const questionsRouter = db.createRouter(questionsCollection);
     app.use('/api/questions', questionsRouter);
+
+    app.get('/', (req, res) => {
+      res.sendFile('index.html');
+    });
+    
   })
   .catch((err) => {
     console.error('Failed to connect to DB');

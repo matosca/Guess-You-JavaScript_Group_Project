@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const GuessWho = __webpack_require__(/*! ./models/guess_who.js */ \"./client/src/models/guess_who.js\");\nconst SelectView = __webpack_require__(!(function webpackMissingModule() { var e = new Error(\"Cannot find module '.views/select_view.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\nconst CardsGridView = __webpack_require__(/*! ./views/cards_grid_view.js */ \"./client/src/views/cards_grid_view.js\");\nconst GameResultView = __webpack_require__(/*! ./views/game_result_view.js */ \"./client/src/views/game_result_view.js\");\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n\n  const questionSelectForm = document.querySelector('form#select-form');\n  const selectView = new SelectView(questionSelectForm);\n  selectView.bindEvents();\n\n  const characterGridDiv = document.querySelector('div#character-grid');\n  const cardsGridView = new CardsGridView(characterGridDiv);\n  cardsGridView.bindEvents();\n\n  const url = \"http://localhost:3000\";\n  const newGame = new GuessWho(url);\n  newGame.bindEvents();\n  newGame.getData();\n  \n});\n\n\n//# sourceURL=webpack:///./client/src/app.js?");
+eval("const GuessWho = __webpack_require__(/*! ./models/guess_who.js */ \"./client/src/models/guess_who.js\");\nconst SelectView = __webpack_require__(/*! ./views/select_view.js */ \"./client/src/views/select_view.js\");\nconst CardsGridView = __webpack_require__(/*! ./views/cards_grid_view.js */ \"./client/src/views/cards_grid_view.js\");\nconst GameResultView = __webpack_require__(/*! ./views/game_result_view.js */ \"./client/src/views/game_result_view.js\");\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  console.log('JS loaded');\n\n  const questionSelectForm = document.querySelector('form#select-form');\n  const selectView = new SelectView(questionSelectForm);\n  selectView.bindEvents();\n\n  const characterGridDiv = document.querySelector('div#character-grid');\n  const cardsGridView = new CardsGridView(characterGridDiv);\n  cardsGridView.bindEvents();\n\n  const apiUrl = 'http://localhost:3000/api';\n\n  const charactersGame = new GuessWho( 'characters', `${apiUrl}/characters` );\n  charactersGame.bindEvents();\n  charactersGame.getData();\n\n  const questionsGame = new GuessWho( 'questions', `${apiUrl}/questions` );\n  questionsGame.bindEvents();\n  questionsGame.getData();\n\n});\n\n\n//# sourceURL=webpack:///./client/src/app.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("const PubSub = {\n  publish: function (channel, payload) {\n    const even
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (29:3)\\nYou may need an appropriate loader to handle this file type.\\n|     const characters = this.getAllCharacters(gameData);\\n|     this.characters = characters;\\n>   };\\n|   PubSub.publish(\\\"GuessWho:all-questions-ready\\\", questions);\\n|   PubSub.publish(\\\"Guesswho:character-data-ready\\\", characters);\");\n\n//# sourceURL=webpack:///./client/src/models/guess_who.js?");
+eval("throw new Error(\"Module parse failed: Unexpected token (82:7)\\nYou may need an appropriate loader to handle this file type.\\n| \\n|   for (let question of questions) {\\n>     if questionId === question.id;\\n|     selectedQuestion = question;\\n|   };\");\n\n//# sourceURL=webpack:///./client/src/models/guess_who.js?");
 
 /***/ }),
 
@@ -135,9 +135,20 @@ eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./client
   !*** ./client/src/views/game_result_view.js ***!
   \**********************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./client/src/views/game_result_view.js?");
+eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./client/src/helpers/pub_sub.js\");\n\nconst GameResultView = function (container) {\n  this.container = container;\n};\n\nGameResultView.prototype.bindEvents = function () {\n  PubSub.subscribe('GuessWho:guessed-card-result', (evt) => {\n    const resultedCard = evt.detail;\n    this.renderResult(resultedCard);\n  });\n};\n\nGameResultView.prototype.renderResult = function (guessedCard) {\n\n  const resultMessage = this.createElement('h2', `Congratulations! You Guessed ${guessedCard.name}`);\n  this.container.appendChild(resultMessage);\n\n  const resultBox = document.createElement('div');\n  resultBox.classList.add('result');\n\n  const resultCharacter = document.createElement('img');\n  resultCharacter.src = guessedCard.image_url;\n  resultBox.appendChild(resultCharacter);\n\n  this.container.appendChild(resultBox);\n};\n\nGameResultView.prototype.createElement = function (elementType, text) {\n  const element = document.createElement(elementType);\n  element.textContent = text;\n  return element;\n};\n\nmodule.exports = GameResultView;\n\n\n//# sourceURL=webpack:///./client/src/views/game_result_view.js?");
+
+/***/ }),
+
+/***/ "./client/src/views/select_view.js":
+/*!*****************************************!*\
+  !*** ./client/src/views/select_view.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const PubSub = __webpack_require__(/*! ../helpers/pub_sub.js */ \"./client/src/helpers/pub_sub.js\");\n\nconst SelectView = function (form) {\n  this.form = form;\n};\n\nSelectView.prototype.bindEvents = function () {\n  PubSub.subscribe('GuessWho:all-questions-ready', (evt) => {\n    const questionsData = evt.detail;\n\n    const selectDropdown = document.querySelector('select#questions');\n\n    selectDropdown.populateSelect(questionsData);\n  });\n\n  this.form.addEventListener('submit', (evt) => {\n\n    const selectedQuestion = evt.target.questions.value;\n\n    PubSub.publish('SelectView:question-selected', selectedQuestion);\n  });\n};\n\nSelectView.prototype.populateSelect = function (questionsData) {\n  questionsData.forEach( (question, index) => {\n    const selectDropdown = document.querySelector('select#questions'); //selects the element 'select' from the DOM\n    const option = this.createQuestionOption(question, index);//creates the options to populate the select\n    selectDropdown.appendChild(option); //appending all the options in the dropdown select\n  });\n};\n\nSelectView.prototype.createQuestionOption = function (question, index) {\n  const option = document.createElement('option'); //creates a tag option for the select\n  option.textContent = question; //sets the textContent to be a question\n  option.value = index; //sets the value to be whatever index the question is\n  return option;\n};\n\nmodule.exports = SelectView;\n\n\n//# sourceURL=webpack:///./client/src/views/select_view.js?");
 
 /***/ })
 

@@ -9,7 +9,7 @@
   padding: 0;
 }
 
-body {
+#welcoming {
   margin: 0 auto;
   max-width: 70em;
   display: flex;
