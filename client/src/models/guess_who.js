@@ -1,7 +1,8 @@
 const PubSub = require('../helpers/pub_sub.js');
 const RequestHelper = require("../helpers/request.js");
 
-const GuessWho = function(url){
+const GuessWho = function(category, url){
+  this.category = category;
   this.url = url;
   this.request = new RequestHelper(this.url);
   this.gameData = null;
@@ -20,14 +21,15 @@ GuessWho.prototype.getData = function () {
   this.request.get()
   .then((gameData) => {
     this.gameData = gameData;
-    const questions = this.getAllQuestions();
-    this.allQuestions = questions;
-    const characters = this.getAllCharacters();
-    this.characters = characters;
+    PubSub.publish(`GuessWho:${this.category}-data-loaded`, data);
+    // const questions = this.getAllQuestions();
+    // this.allQuestions = questions;
+    // const characters = this.getAllCharacters();
+    // this.characters = characters;
     const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
     this.hiddenCharacter = hiddenCharacter;
-    PubSub.publish("GuessWho:all-questions-ready", questions);
-    PubSub.publish("Guesswho:character-data-ready", characters);
+    // PubSub.publish("GuessWho:all-questions-ready", questions);
+    // PubSub.publish("Guesswho:character-data-ready", characters);
   })
   .catch( (err) => console.error(err) );
 
@@ -63,19 +65,19 @@ return charactersToEliminate;
 };
 
 
-GuessWho.prototype.getAllQuestions = function() {
-  console.log(this.gameData);
-  let questions = this.gameData.questions; //go inside log and find correct route
-  //do we need to map this? is it already an array?
-  return questions;
-};
+// GuessWho.prototype.getAllQuestions = function() {
+//   console.log(this.gameData);
+//   let questions = this.gameData.questions; //go inside log and find correct route
+//   //do we need to map this? is it already an array?
+//   return questions;
+// };
 
 GuessWho.prototype.getAllCharacters = function() {
-  console.log(this.gameData)
-  let characters = this.gameData.characters;//go inside log and find correct route
-  //do we need to map this? is it already an array?
-  return characters;
-};
+//   console.log(this.gameData)
+//   let characters = this.gameData.characters;//go inside log and find correct route
+//   //do we need to map this? is it already an array?
+//   return characters;
+// };
 
 GuessWho.prototype.getHiddenCharacter = function() {
   let hiddenCharacter = this.characters[Math.floor(Math.random()*this.characters.length)];

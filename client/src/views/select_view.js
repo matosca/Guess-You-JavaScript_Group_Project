@@ -5,17 +5,14 @@ const SelectView = function (form) {
 };
 
 SelectView.prototype.bindEvents = function () {
-  PubSub.subscribe('GuessWho:all-questions-ready', (evt) => {
+  PubSub.subscribe(`GuessWho:questions-data-loaded`, (evt) => {
     const questionsData = evt.detail;
-    console.log('questions', evt.detail);
-
     const selectDropdown = document.querySelector('select#questions');
-
     selectDropdown.populateSelect(questionsData);
   });
 
   this.form.addEventListener('submit', (evt) => {
-
+    
     const selectedQuestion = evt.target.questions.value;
 
     PubSub.publish('SelectView:question-selected', selectedQuestion);
