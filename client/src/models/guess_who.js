@@ -55,7 +55,7 @@ GuessWho.prototype.getCharactersToEliminate = function (relatedKey, attribute) {
   const charactersToEliminate = [];
   const characters = this.characters;
   for (character of characters){
-    if (character.attribute !== this.hiddenCharacter.attribute) { //shouldn't this line be 'character.attribute' without interpolation
+    if (character.attribute !== this.hiddenCharacter.attribute) {
     charactersToEliminate.push(character);
   };
 };
@@ -79,8 +79,8 @@ Guesswho.prototype.getAllCharacters = function() {
 
 GuessWho.prototype.getHiddenCharacter = function() {
   let hiddenCharacter = this.characters[Math.floor(Math.random()*this.characters.length)];
-  return hiddenCharacter
-}
+  return hiddenCharacter;
+};
 
 GuessWho.prototype.getSelectedQuestion = function (questionId) {
   const selectedQuestion = null;
@@ -89,7 +89,7 @@ GuessWho.prototype.getSelectedQuestion = function (questionId) {
   for (let question of questions) {
     if (questionId === question.id){
       selectedQuestion = question;
-    }
+    };
   };
   return selectedQuestion;
 };
