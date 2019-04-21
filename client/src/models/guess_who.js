@@ -32,6 +32,7 @@ GuessWho.prototype.getData = function () {
   .catch( (err) => console.error(err) );
 
   // This might not go in here, although I do not understand what this bit means. Maybe in a separate function or bindEvents if we are doing something to it. Maria
+  //I think this may be the only place this makes sense. we need to have this.characters set up before we can run hiddenCharacter() i think. :/ Confused David
 
   // const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
   // this.hiddenCharacter = hiddenCharacter;
@@ -76,7 +77,7 @@ Guesswho.prototype.getAllCharacters = function() {
   return characters;
 };
 
-GuessWho.prototype.getHiddenCharacter = function(){
+GuessWho.prototype.getHiddenCharacter = function() {
   let hiddenCharacter = this.characters[Math.floor(Math.random()*this.characters.length)];
   return hiddenCharacter
 }
@@ -96,8 +97,8 @@ GuessWho.prototype.getSelectedQuestion = function (questionId) {
 GuessWho.prototype.updateCards = function (charactersToEliminate) {
   const charactersTobeChangedinView = charactersToEliminate;
   const charactersInGridView = this.characters;
-  for (character of charactersTobeChangedinView ){
-    this.request
+  for (character of charactersTobeChangedinView ) {
+    this.request.update()
     .update(character.id)
     .then(remainingCharacters => this.characters = remainingCharacters);
   };
