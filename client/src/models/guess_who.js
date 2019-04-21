@@ -51,8 +51,10 @@ GuessWho.prototype.getCharactersToEliminate = function (relatedKey, attribute) {
   const charactersToEliminate = [];
   const characters = this.characters;
   for (character of characters){
+    // if character.inPlay === true
     if (character.${attribute} !== this.hiddenCharacter.${attribute}){
       charactersToEliminate.push(character);
+      // character.inPlay = false
     };
   };
   return charactersToEliminate;
