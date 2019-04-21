@@ -22,9 +22,9 @@ GuessWho.prototype.getData = function () {
   .get()
   .then((gameData) => {
     this.gameData = gameData;
-    const questions = this.getAllQuestions(gameData);
+    const questions = this.getAllQuestions();
     this.allQuestions = questions;
-    const characters = this.getAllCharacters(gameData);
+    const characters = this.getAllCharacters();
     this.characters = characters;
     PubSub.publish("GuessWho:all-questions-ready", questions);
     PubSub.publish("Guesswho:character-data-ready", characters);
@@ -55,32 +55,40 @@ GuessWho.prototype.getCharactersToEliminate = function (relatedKey, attribute) {
   const characters = this.characters;
   for (character of characters){
     if (character.attribute !== this.hiddenCharacter.attribute) { //shouldn't this line be 'character.attribute' without interpolation
-      charactersToEliminate.push(character);
-    };
+    charactersToEliminate.push(character);
   };
-  return charactersToEliminate;
+};
+return charactersToEliminate;
 };
 
 
-GuessWho.prototype.getAllQuestions = function(gameData) {
-  console.log(gameData);
-  let questions = gameData.questions; //go inside log and find correct route
+GuessWho.prototype.getAllQuestions = function() {
+  console.log(this.gameData);
+  let questions = this.gameData.questions; //go inside log and find correct route
+  //do we need to map this? is it already an array?
   return questions;
 };
 
-Guesswho.prototype.getAllCharacters = function(gameData) {
-  console.log(gameData);
-  let questions = gameData.questions;//go inside log and find correct route
+Guesswho.prototype.getAllCharacters = function() {
+  console.log(this.gameData)
+  let questions = this.gameData.questions;//go inside log and find correct route
+  //do we need to map this? is it already an array?
   return questions;
 };
+
+GuessWho.prototype.getHiddenCharacter = function(){
+  let hiddenCharacter = this.characters[Math.floor(Math.random()*this.characters.length)];
+  return hiddenCharacter
+}
 
 GuessWho.prototype.getSelectedQuestion = function (questionId) {
   const selectedQuestion = null;
   const questions = this.allQuestions;
 
   for (let question of questions) {
-    if questionId === question.id;
-    selectedQuestion = question;
+    if (questionId === question.id){
+      selectedQuestion = question;
+    }
   };
   return selectedQuestion;
 };
