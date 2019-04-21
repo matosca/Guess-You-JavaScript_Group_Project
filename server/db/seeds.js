@@ -1,3 +1,4 @@
+// No need of having a second file that holds the data of questions when the both refers to the same database 'guessWho'. It is completely fine to have to collections (or tables in SQL) in the same db. 
 use guessWho;
 db.dropDatabase();
 
