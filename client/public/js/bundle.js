@@ -115,7 +115,7 @@ eval("const PubSub = {\n  publish: function (channel, payload) {\n    const even
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (103:2)\\nYou may need an appropriate loader to handle this file type.\\n|     .then(remainingCharacters => this.characters = remainingCharacters);\\n|   };\\n>   .catch(error) => {\\n|     PubSub.publish(\\\"GuessWho:error\\\", error);  //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING\\n|   };\");\n\n//# sourceURL=webpack:///./client/src/models/guess_who.js?");
+eval("throw new Error(\"Module parse failed: Unexpected token (105:2)\\nYou may need an appropriate loader to handle this file type.\\n|     .then(remainingCharacters => this.characters = remainingCharacters);\\n|   };\\n>   .catch(error) => {\\n|     PubSub.publish(\\\"GuessWho:error\\\", error);  //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING\\n|   };\");\n\n//# sourceURL=webpack:///./client/src/models/guess_who.js?");
 
 /***/ }),
 

@@ -98,7 +98,7 @@ GuessWho.prototype.updateCards = function (charactersToEliminate) {
   const charactersTobeChangedinView = charactersToEliminate;
   const charactersInGridView = this.characters;
   for (character of charactersTobeChangedinView ) {
-    this.request.update()
+    this.request
     .update(character.id)
     .then(remainingCharacters => this.characters = remainingCharacters);
   };
