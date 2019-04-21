@@ -44,7 +44,7 @@ GuessWho.prototype.getResult = function (questionId) {
   const selectedQuestion = this.getSelectedQuestion(questionId);
   const relatedKey = selectedQuestion.related_key;
   const attribute = selectedQuestion.attribute;
-  const charactersToEliminate = this.getCharactersToEliminate(relatedKey, attribute);
+  let charactersToEliminate = this.getCharactersToEliminate(relatedKey, attribute);
   const updatedCards = this.updateCards(charactersToEliminate);
   PubSub.publish("GuessWho:updated-grid-view-ready", updatedCards);
 };
@@ -93,15 +93,15 @@ GuessWho.prototype.getSelectedQuestion = function (questionId) {
 };
 
 GuessWho.prototype.updateCards = function (charactersToEliminate) {
-  const charactersToEliminate = charactersToEliminate;
+  const charactersTobeChangedinView = charactersToEliminate;
   const charactersInGridView = this.characters;
-  for (character of charactersToEliminate){
+  for (character of charactersTobeChangedinView ){
     this.request
     .update(character.id)
     .then(remainingCharacters => this.characters = remainingCharacters);
-  }
+  };
   .catch(error) => {
-    PubSub.publish("GuessWho:error", err);  //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
+    PubSub.publish("GuessWho:error", error);  //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
   };
 };
 
