@@ -3,7 +3,10 @@ const RequestHelper = function (url) {
 };
 
 RequestHelper.prototype.get = function () {
-  return fetch(this.url)
+  return fetch(this.url, {
+    mode: 'no-cors', // to fetch resource with CORS disabled
+    headers: { 'Content-Type':'application/json' }
+  })
     .then( (response) => response.json() )
     .catch( (err) => console.error(err) );
 };

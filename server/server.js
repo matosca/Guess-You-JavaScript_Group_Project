@@ -10,26 +10,29 @@ app.use(express.static(publicPath));
 
 app.use(parser.json());
 
-MongoClient.connect('mongodb://localhost:27017')
+
+//DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect
+MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true })
   .then((client) => {
     const db = client.db('guessWho'); //accessing the database
 
     //accessing the collection of characters from 'guessWho' database
     const charactersCollection = db.collection('characters');
     //creating router for collection of characters
-    const charactersRouter = db.createRouter(charactersCollection);
+    const charactersRouter = createRouter(charactersCollection);
     app.use('/api/characters', charactersRouter);
 
     //accessing the collectin of questions from 'guessWho' database
     const questionsCollection = db.collection('questions');
     //creating router for collection of questions
-    const questionsRouter = db.createRouter(questionsCollection);
+    const questionsRouter = createRouter(questionsCollection);
     app.use('/api/questions', questionsRouter);
 
+    //redirecting info with method GET from both router to the send file and so same path
     app.get('/', (req, res) => {
       res.sendFile('index.html');
     });
-    
+
   })
   .catch((err) => {
     console.error('Failed to connect to DB');
