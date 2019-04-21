@@ -11,7 +11,6 @@ const GuessWho = function(url){
 };
 
 GuessWho.prototype.bindEvents = function () {
-
   PubSub.subscribe('SelectView:question-selected', (evt) => {
     this.getResult(evt.detail);
   });
@@ -25,6 +24,8 @@ GuessWho.prototype.getData = function () {
     this.allQuestions = questions;
     const characters = this.getAllCharacters();
     this.characters = characters;
+    const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
+    this.hiddenCharacter = hiddenCharacter;
     PubSub.publish("GuessWho:all-questions-ready", questions);
     PubSub.publish("Guesswho:character-data-ready", characters);
   })
@@ -70,9 +71,9 @@ GuessWho.prototype.getAllQuestions = function() {
 
 Guesswho.prototype.getAllCharacters = function() {
   console.log(this.gameData)
-  let questions = this.gameData.questions;//go inside log and find correct route
+  let characters = this.gameData.characters;//go inside log and find correct route
   //do we need to map this? is it already an array?
-  return questions;
+  return characters;
 };
 
 GuessWho.prototype.getHiddenCharacter = function(){
