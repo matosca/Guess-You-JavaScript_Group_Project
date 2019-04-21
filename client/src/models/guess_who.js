@@ -18,8 +18,7 @@ GuessWho.prototype.bindEvents = function () {
 };
 
 GuessWho.prototype.getData = function () {
-  this.request
-  .get()
+  this.request.get()
   .then((gameData) => {
     this.gameData = gameData;
     const questions = this.getAllQuestions(gameData);
