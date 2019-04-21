@@ -70,7 +70,7 @@ GuessWho.prototype.getAllQuestions = function() {
   return questions;
 };
 
-Guesswho.prototype.getAllCharacters = function() {
+GuessWho.prototype.getAllCharacters = function() {
   console.log(this.gameData)
   let characters = this.gameData.characters;//go inside log and find correct route
   //do we need to map this? is it already an array?
@@ -101,10 +101,11 @@ GuessWho.prototype.updateCards = function (charactersToEliminate) {
     this.request
     .update(character.id)
     .then(remainingCharacters => this.characters = remainingCharacters);
+  }
+  // .catch( (err) => console.error(err) );
+  // .catch(error) => {
+  //   PubSub.publish("GuessWho:error", error);  //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
+  // Amy: good idea whilst we build the error view. Somehow still throws an error so I have commented out for now and we can discuss tomrrow.
   };
-  .catch(error) => {
-    PubSub.publish("GuessWho:error", error);  //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
-  };
-};
 
 module.exports = GuessWho;

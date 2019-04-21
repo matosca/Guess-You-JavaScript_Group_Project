@@ -7,7 +7,7 @@ const GameResultView = require('./views/game_result_view.js');
 document.addEventListener("DOMContentLoaded", () => {
   console.log('JS loaded');
 
-  const questionSelectForm = document.querySelector('form#select-form');
+  const questionSelectForm = document.querySelector('.select-form');
   const selectView = new SelectView(questionSelectForm);
   selectView.bindEvents();
 
