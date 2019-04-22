@@ -16,6 +16,7 @@ Characters.prototype.getData = function () {
   this.request.get()
   .then((gameData) => {
     this.characters = gameData;
+    // console.log('character', gameData);
     PubSub.publish('Characters:characters-data-loaded', gameData);
       const hiddenCharacter = this.getHiddenCharacter();
       this.hiddenCharacter = hiddenCharacter;
@@ -24,11 +25,11 @@ Characters.prototype.getData = function () {
 };
 
 Characters.prototype.getCharactersToEliminate = function (relatedKey, attribute) {
+  console.log(this.hiddenCharacter);
   const charactersToEliminate = [];
   const characters = this.characters;
   for (let character in characters){
-    console.log(character.attribute);
-    if (character.attribute !== this.hiddenCharacter.attribute) {
+    if (attribute !== this.hiddenCharacter.relatedKey) { //related key to be accessed
       charactersToEliminate.push(character);
     };
   };
