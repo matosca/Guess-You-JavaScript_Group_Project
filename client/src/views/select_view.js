@@ -5,11 +5,9 @@ const SelectView = function (form) {
 };
 
 SelectView.prototype.bindEvents = function () {
-  PubSub.subscribe('GuessWho:all-questions-ready', (evt) => {
+  PubSub.subscribe('GuessWho:questions-data-loaded', (evt) => {
     const questionsData = evt.detail;
-
     const selectDropdown = document.querySelector('select#questions');
-
     selectDropdown.populateSelect(questionsData);
   });
 
@@ -23,7 +21,7 @@ SelectView.prototype.bindEvents = function () {
 
 SelectView.prototype.populateSelect = function (questionsData) {
   questionsData.forEach( (question, index) => {
-    const selectDropdown = document.querySelector('select#questions'); //selects the element 'select' from the DOM
+    const selectDropdown = document.querySelector('#questions'); //selects the element 'select' from the DOM
     const option = this.createQuestionOption(question, index);//creates the options to populate the select
     selectDropdown.appendChild(option); //appending all the options in the dropdown select
   });

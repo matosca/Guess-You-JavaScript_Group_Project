@@ -1,9 +1,9 @@
 const PubSub = require('../helpers/pub_sub.js');
 const RequestHelper = require("../helpers/request.js");
 
-const GuessWho = function(url){
-  this.url = url
-  console.log(this.url);
+const GuessWho = function(category, url){
+  this.category = category;
+  this.url = url;
   this.request = new RequestHelper(this.url);
   this.gameData = null;
   this.allQuestions = null;
@@ -21,6 +21,8 @@ GuessWho.prototype.getData = function () {
   this.request.get()
   .then((gameData) => {
     this.gameData = gameData;
+    PubSub.publish(`GuessWho:${this.category}-data-loaded`, gameData);
+    // Amy: trying to make this in line with the tea and biscuits example but unsure if the same approach will work for our game. Would love someone else's take on it.
     const questions = this.getAllQuestions();
     console.log(questions);
     this.allQuestions = questions;
@@ -28,8 +30,9 @@ GuessWho.prototype.getData = function () {
     this.characters = characters;
     const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
     this.hiddenCharacter = hiddenCharacter;
-    PubSub.publish("GuessWho:all-questions-ready", questions);
-    PubSub.publish("Guesswho:character-data-ready", characters);
+    // PubSub.publish("GuessWho:all-questions-ready", questions);
+    // PubSub.publish("Guesswho:character-data-ready", characters);
+    // Amy: commented these out but unsure if we might need them
   })
   // .catch( (err) => console.error(err) );
 
