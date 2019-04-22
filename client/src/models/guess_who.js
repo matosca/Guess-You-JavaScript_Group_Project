@@ -35,14 +35,14 @@ GuessWho.prototype.getData = function () {
 };
 
 GuessWho.prototype.findQuestionByContent = function (questionContent) {
-  this.allQuestions.find( () => {
-
-  })
+  const matchingQuestion = this.allQuestions.find(question => question.question === questionContent);
+  return matchingQuestion;
 };
 
+
 GuessWho.prototype.getResult = function (questionContent) {
-  console.log(questionContent);
-  const selectedQuestion = this.getSelectedQuestion(questionContent);
+  const selectedQuestion = this.findQuestionByContent(questionContent);
+  const singleQuestion = this.getSelectedQuestion(questionContent);
   const relatedKey = selectedQuestion.related_key;
   const attribute = selectedQuestion.attribute;
   let charactersToEliminate = this.getCharactersToEliminate(relatedKey, attribute);
@@ -87,12 +87,8 @@ GuessWho.prototype.updateCards = function (charactersToEliminate) {
         card.inplay === false
       }
     }
-
   }
-  // .catch( (err) => console.error(err) );
-  // .catch(error) => {
-  //   PubSub.publish("GuessWho:error", error);  //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
-  // Amy: good idea whilst we build the error view. Somehow still throws an error so I have commented out for now and we can discuss tomrrow.
+  return charactersInGridView;
 };
 
 module.exports = GuessWho;
