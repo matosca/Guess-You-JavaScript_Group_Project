@@ -27,6 +27,7 @@ Characters.prototype.getCharactersToEliminate = function (relatedKey, attribute)
   const charactersToEliminate = [];
   const characters = this.characters;
   for (let character in characters){
+    console.log(character.attribute);
     if (character.attribute !== this.hiddenCharacter.attribute) {
       charactersToEliminate.push(character);
     };
@@ -40,16 +41,14 @@ Characters.prototype.getHiddenCharacter = function() {
 };
 
 Characters.prototype.updateCards = function (charactersToEliminate) {
-  const charactersTobeChangedinView = charactersToEliminate;
   const charactersInGridView = this.characters;
-  for (card of charactersInGridView ) {
-    for (character of charactersToEliminate){
-      if (card === character){
-        card.inplay === false
-      }
-    }
-
-  }
+  for (card in charactersInGridView ) {
+    for (character in charactersToEliminate){
+      if (card == character){
+        card.inplay = false
+      };
+    };
+  };
 };
 
 module.exports = Characters;

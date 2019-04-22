@@ -1,10 +1,12 @@
 const PubSub = require('../helpers/pub_sub.js');
 const RequestHelper = require("../helpers/request.js");
+const Characters = require('./characters.js');
 
 const Questions = function (url){
   this.url = url;
   this.request = new RequestHelper(this.url);
   this.allQuestions = null;
+  this.characters = new Characters(this.url);
 };
 
 Questions.prototype.bindEventsQuestions = function () {
@@ -22,32 +24,32 @@ Questions.prototype.getData = function () {
   .catch( (err) => console.error(err) );
 };
 
-// Questions.prototype.findQuestionByContent = function (questionContent) {
-//   this.allQuestions.find( () => {
-//
-//   })
-// };
+Questions.prototype.findQuestionByContent = function (questionContent) {
+  return this.allQuestions.find(question => question.question === questionContent);
+};
 
 Questions.prototype.getResult = function (questionContent) {
-  console.log(questionContent);
-  const selectedQuestion = this.getSelectedQuestion(questionContent);
+  const selectedQuestion = this.findQuestionByContent(questionContent);
   const relatedKey = selectedQuestion.related_key;
   const attribute = selectedQuestion.attribute;
-  let charactersToEliminate = this.getCharactersToEliminate(relatedKey, attribute);
-  const updatedCards = this.updateCards(charactersToEliminate);
-  PubSub.publish("Questions:questions-data-loaded", updatedCards);
+  let charactersToEliminate = this.characters.getCharactersToEliminate(relatedKey, attribute);
+  console.log(charactersToEliminate);
+  const updatedCards = this.characters.updateCards(charactersToEliminate);
+  console.log(updatedCards);
+  PubSub.publish('Characters:characters-data-loaded', updatedCards);
 };
 
-Questions.prototype.getSelectedQuestion = function (questionContent) {
-  const questions = this.allQuestions;
-  for (let question in questions) {
-    let selectedQuestion = [];
-    if (questionContent === question.question){
-      selectedQuestion = question;
-    };
-    return selectedQuestion;
-  };
+// Questions.prototype.getSelectedQuestion = function (questionContent) {
+//   const questions = this.allQuestions;
+//   for (let question in questions) {
+//     let selectedQuestion = [];
+//     if (questionContent === question.question){
+//       selectedQuestion = question;
+//     };
+//     return selectedQuestion;
+//   };
+// };
 
-};
+
 
 module.exports = Questions;
