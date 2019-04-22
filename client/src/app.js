@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   cardsGridView.bindEvents();
 
   const apiUrl = 'http://localhost:3000/api';
-
   const charactersGame = new GuessWho( 'characters', `${apiUrl}/characters` );
   charactersGame.bindEvents();
   charactersGame.getData();

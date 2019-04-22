@@ -7,7 +7,6 @@ const SelectView = function (form) {
 SelectView.prototype.bindEvents = function () {
   PubSub.subscribe('GuessWho:all-questions-ready', (evt) => {
     const questionsData = evt.detail;
-    console.log('questions', evt.detail);
 
     const selectDropdown = document.querySelector('select#questions');
 

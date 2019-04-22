@@ -2,7 +2,8 @@ const PubSub = require('../helpers/pub_sub.js');
 const RequestHelper = require("../helpers/request.js");
 
 const GuessWho = function(url){
-  this.url = url;
+  this.url = url
+  console.log(this.url);
   this.request = new RequestHelper(this.url);
   this.gameData = null;
   this.allQuestions = null;
@@ -21,6 +22,7 @@ GuessWho.prototype.getData = function () {
   .then((gameData) => {
     this.gameData = gameData;
     const questions = this.getAllQuestions();
+    console.log(questions);
     this.allQuestions = questions;
     const characters = this.getAllCharacters();
     this.characters = characters;
@@ -29,7 +31,7 @@ GuessWho.prototype.getData = function () {
     PubSub.publish("GuessWho:all-questions-ready", questions);
     PubSub.publish("Guesswho:character-data-ready", characters);
   })
-  .catch( (err) => console.error(err) );
+  // .catch( (err) => console.error(err) );
 
   // This might not go in here, although I do not understand what this bit means. Maybe in a separate function or bindEvents if we are doing something to it. Maria
   //I think this may be the only place this makes sense. we need to have this.characters set up before we can run hiddenCharacter() i think. :/ Confused David
@@ -64,15 +66,14 @@ return charactersToEliminate;
 
 
 GuessWho.prototype.getAllQuestions = function() {
-  console.log(this.gameData);
-  let questions = this.gameData.questions; //go inside log and find correct route
+  let questions = this.gameData.questions;
   //do we need to map this? is it already an array?
   return questions;
 };
 
 GuessWho.prototype.getAllCharacters = function() {
-  console.log(this.gameData)
-  let characters = this.gameData.characters;//go inside log and find correct route
+  let characters = this.gameData.characters;
+  //go inside log and find correct route
   //do we need to map this? is it already an array?
   return characters;
 };
