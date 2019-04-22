@@ -6,8 +6,6 @@ const GuessWho = function(category, url){
   this.url = url;
   this.request = new RequestHelper(this.url);
   this.gameData = null;
-  // this.allQuestions = null;
-  // this.characters = null;
   this.hiddenCharacter = null;
 };
 
@@ -76,10 +74,6 @@ GuessWho.prototype.updateCards = function (charactersToEliminate) {
     .update(character.id)
     .then(remainingCharacters => this.characters = remainingCharacters);
   }
-  // .catch( (err) => console.error(err) );
-  // .catch(error) => {
-  //   PubSub.publish("GuessWho:error", error);  //maybe we can do just .catch( (err) => console.error(err) ); ??? JUST SUGGESTING
-  // Amy: good idea whilst we build the error view. Somehow still throws an error so I have commented out for now and we can discuss tomrrow.
 };
 
 module.exports = GuessWho;
