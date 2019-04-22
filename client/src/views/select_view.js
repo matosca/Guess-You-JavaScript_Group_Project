@@ -9,7 +9,6 @@ SelectView.prototype.bindEvents = function () {
     const questionsData = evt.detail;
     this.populateSelect(questionsData);
     //A: there's something wrong with the way we're calling populateSelect
-
   });
 
   const questionForm = document.querySelector('.select-form');
