@@ -12,7 +12,7 @@ app.use(parser.json());
 
 
 //DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect
-MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true })
+MongoClient.connect('mongodb://localhost:27017')
   .then((client) => {
     const db = client.db('guessWho'); //accessing the database
 
