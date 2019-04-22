@@ -5,7 +5,6 @@ const GameResultView = require('./views/game_result_view.js');
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('JS loaded');
 
   const questionSelectForm = document.querySelector('.select-form');
   const selectView = new SelectView(questionSelectForm);
@@ -23,5 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const questionsGame = new GuessWho( 'questions', `${apiUrl}/questions` );
   questionsGame.bindEvents();
   questionsGame.getData();
+
 
 });
