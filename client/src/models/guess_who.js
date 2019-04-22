@@ -59,7 +59,8 @@ return charactersToEliminate;
 };
 
 GuessWho.prototype.getHiddenCharacter = function() {
-  let hiddenCharacter = this.characters[Math.floor(Math.random()*this.characters.length)];
+  let hiddenCharacter = this.characters[Math.floor(Math.random()*this.characters.length)]
+  console.log(hiddenCharacter);
   return hiddenCharacter;
 };
 
