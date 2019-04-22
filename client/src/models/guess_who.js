@@ -69,15 +69,16 @@ return charactersToEliminate;
 
 GuessWho.prototype.getAllQuestions = function() {
   console.log(this.gameData);
-  let questions = this.gameData.questions; //go inside log and find correct route
-  //do we need to map this? is it already an array?
+  let questions = this.gameData.questions.map(){
+    return this.gameData.questions
+  }; //go inside log and find correct route
   return questions;
 };
 
 GuessWho.prototype.getAllCharacters = function() {
   console.log(this.gameData)
   let characters = this.gameData.characters;//go inside log and find correct route
-  //do we need to map this? is it already an array?
+
   return characters;
 };
 
