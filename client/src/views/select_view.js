@@ -33,6 +33,7 @@ SelectView.prototype.createQuestionOption = function (question, index) {
   const option = document.createElement('option'); //creates a tag option for the select
   option.textContent = question.question; //sets the textContent to be a question
   option.value = index; //sets the value to be whatever index the question is
+  option.value = question.question; //sets the value to be whatever index the question is
   return option;
 };
 
