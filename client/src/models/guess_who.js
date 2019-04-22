@@ -13,7 +13,6 @@ const GuessWho = function(category, url){
 
 GuessWho.prototype.bindEvents = function () {
   PubSub.subscribe('SelectView:question-selected', (evt) => {
-    console.log( 'this is the quetion', evt.detail);
     this.getResult(evt.detail);
   });
 };
@@ -22,7 +21,6 @@ GuessWho.prototype.getData = function () {
   this.request.get()
   .then((gameData) => {
     this.gameData = gameData;
-    console.log('Boo!', gameData);
     PubSub.publish(`GuessWho:${this.category}-data-loaded`, gameData);
     if (this.category === 'questions'){
       this.allQuestions = gameData;
@@ -36,9 +34,15 @@ GuessWho.prototype.getData = function () {
   .catch( (err) => console.error(err) );
 };
 
+GuessWho.prototype.findQuestionByContent = function (questionContent) {
+  this.allQuestions.find( () => {
+
+  })
+};
+
 GuessWho.prototype.getResult = function (questionContent) {
+  console.log(questionContent);
   const selectedQuestion = this.getSelectedQuestion(questionContent);
-  console.log('Hello!', selectedQuestion);
   const relatedKey = selectedQuestion.related_key;
   const attribute = selectedQuestion.attribute;
   let charactersToEliminate = this.getCharactersToEliminate(relatedKey, attribute);

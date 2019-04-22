@@ -5,7 +5,6 @@ const GameResultView = require('./views/game_result_view.js');
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('JS loaded');
 
   const characterGridDiv = document.querySelector('div#character-grid');
   const newCharactersGridView = new CardsGridView(characterGridDiv);
