@@ -9,6 +9,8 @@ SelectView.prototype.bindEvents = function () {
     const questionsData = evt.detail;
     const selectDropdown = document.querySelector('select#questions');
     selectDropdown.populateSelect(questionsData);
+    //A: there's something wrong with the way we're calling populateSelect
+
   });
 
   this.form.addEventListener('submit', (evt) => {

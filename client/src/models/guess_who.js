@@ -22,12 +22,6 @@ GuessWho.prototype.getData = function () {
   .then((gameData) => {
     this.gameData = gameData;
     PubSub.publish(`GuessWho:${this.category}-data-loaded`, gameData);
-    // Amy: trying to make this in line with the tea and biscuits example but unsure if the same approach will work for our game. Would love someone else's take on it.
-    const questions = this.getAllQuestions();
-    console.log(questions);
-    this.allQuestions = questions;
-    const characters = this.getAllCharacters();
-    this.characters = characters;
     const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
     this.hiddenCharacter = hiddenCharacter;
     // PubSub.publish("GuessWho:all-questions-ready", questions);
@@ -38,9 +32,6 @@ GuessWho.prototype.getData = function () {
 
   // This might not go in here, although I do not understand what this bit means. Maybe in a separate function or bindEvents if we are doing something to it. Maria
   //I think this may be the only place this makes sense. we need to have this.characters set up before we can run hiddenCharacter() i think. :/ Confused David
-
-  // const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
-  // this.hiddenCharacter = hiddenCharacter;
 
   // .catch((error) => {
   //   PubSub.publish("GuessWho:error", err));//maybe not needed if below
@@ -65,23 +56,6 @@ GuessWho.prototype.getCharactersToEliminate = function (relatedKey, attribute) {
   };
 };
 return charactersToEliminate;
-};
-
-
-GuessWho.prototype.getAllQuestions = function() {
-
-  let questions = this.gameData.questions.map()
-  console.log(questions);{
-    return this.gameData.questions
-  }; //go inside log and find correct route
-  return questions;
-};
-
-GuessWho.prototype.getAllCharacters = function() {
-  console.log(this.gameData)
-  let characters = this.gameData.characters;//go inside log and find correct route
-
-  return characters;
 };
 
 GuessWho.prototype.getHiddenCharacter = function() {
