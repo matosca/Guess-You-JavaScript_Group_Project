@@ -36,6 +36,7 @@ GuessWho.prototype.getData = function () {
 
 GuessWho.prototype.findQuestionByContent = function (questionContent) {
   const matchingQuestion = this.allQuestions.find(question => question.question === questionContent);
+  console.log(matchingQuestion);
   return matchingQuestion;
 };
 
