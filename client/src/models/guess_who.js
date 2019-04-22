@@ -81,10 +81,13 @@ GuessWho.prototype.getSelectedQuestion = function (questionContent) {
 GuessWho.prototype.updateCards = function (charactersToEliminate) {
   const charactersTobeChangedinView = charactersToEliminate;
   const charactersInGridView = this.characters;
-  for (character of charactersTobeChangedinView ) {
-    this.request
-    .update(character.id)
-    .then(remainingCharacters => this.characters = remainingCharacters);
+  for (card of charactersInGridView ) {
+    for (character of charactersToEliminate){
+      if (card === character){
+        card.inplay === false
+      }
+    }
+
   }
   // .catch( (err) => console.error(err) );
   // .catch(error) => {
