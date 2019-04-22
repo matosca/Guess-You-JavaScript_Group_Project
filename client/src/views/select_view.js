@@ -5,7 +5,7 @@ const SelectView = function (select) {
 };
 
 SelectView.prototype.bindEvents = function () {
-  PubSub.subscribe('GuessWho:questions-data-loaded', (evt) => {
+  PubSub.subscribe('Questions:questions-data-loaded', (evt) => {
     const questionsData = evt.detail;
     this.populateSelect(questionsData);
     //A: there's something wrong with the way we're calling populateSelect
@@ -24,8 +24,8 @@ SelectView.prototype.populateSelect = function (questionsData) {
   questionsData.forEach( (question, index) => {
     // const selectDropdown = document.querySelector('select#questions'); //selects the element 'select' from the DOM
     const option = this.createQuestionOption(question, index);
-    
-    console.log('this are the options', option);
+
+    // console.log('this are the options', option);
 
     this.select.appendChild(option);//creates the options to populate the select
     // selectDropdown.appendChild(option); //appending all the options in the dropdown select

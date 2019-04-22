@@ -5,7 +5,7 @@ const CardsGridView = function (container) {
 };
 
 CardsGridView.prototype.bindEvents = function () {
-  PubSub.subscribe('Guesswho:characters-data-ready', (evt) => {
+  PubSub.subscribe('Characters:characters-data-loaded', (evt) => {
     const charactersData = evt.detail;
     this.render(charactersData);
   });
