@@ -7,22 +7,22 @@ const GameResultView = require('./views/game_result_view.js');
 document.addEventListener("DOMContentLoaded", () => {
   console.log('JS loaded');
 
-  const questionSelectForm = document.querySelector('.select-form');
-  const selectView = new SelectView(questionSelectForm);
+  const questionSelect = document.querySelector('#questions');
+  const selectView = new SelectView(questionSelect);
   selectView.bindEvents();
 
   const characterGridDiv = document.querySelector('div#character-grid');
-  const cardsGridView = new CardsGridView(characterGridDiv);
-  cardsGridView.bindEvents();
+  const newCharactersGridView = new CardsGridView(characterGridDiv);
+  newCharactersGridView.bindEvents();
 
   const apiUrl = 'http://localhost:3000/api';
-
-  const charactersGame = new GuessWho( 'characters', `${apiUrl}/characters` );
-  charactersGame.bindEvents();
-  charactersGame.getData();
 
   const questionsGame = new GuessWho( 'questions', `${apiUrl}/questions` );
   questionsGame.bindEvents();
   questionsGame.getData();
+
+  const charactersGame = new GuessWho( 'characters', `${apiUrl}/characters` );
+  charactersGame.bindEvents();
+  charactersGame.getData();
 
 });

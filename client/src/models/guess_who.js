@@ -21,8 +21,8 @@ GuessWho.prototype.getData = function () {
   this.request.get()
   .then((gameData) => {
     this.gameData = gameData;
+    console.log('Boo!', gameData);
     PubSub.publish(`GuessWho:${this.category}-data-loaded`, gameData);
-    console.log('Yay!', gameData);
     const hiddenCharacter = this.getHiddenCharacter(); // where will I be?
     this.hiddenCharacter = hiddenCharacter;
     // PubSub.publish("GuessWho:all-questions-ready", questions);
