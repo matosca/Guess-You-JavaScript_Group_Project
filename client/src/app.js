@@ -5,15 +5,14 @@ const GameResultView = require('./views/game_result_view.js');
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('JS loaded');
-
-  const questionSelect = document.querySelector('#questions');
-  const selectView = new SelectView(questionSelect);
-  selectView.bindEvents();
 
   const characterGridDiv = document.querySelector('div#character-grid');
   const newCharactersGridView = new CardsGridView(characterGridDiv);
   newCharactersGridView.bindEvents();
+
+  const questionSelect = document.querySelector('#questions');
+  const selectView = new SelectView(questionSelect);
+  selectView.bindEvents();
 
   const apiUrl = 'http://localhost:3000/api';
 

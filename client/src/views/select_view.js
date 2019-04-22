@@ -5,9 +5,8 @@ const SelectView = function (select) {
 };
 
 SelectView.prototype.bindEvents = function () {
-  PubSub.subscribe(`GuessWho:questions-data-loaded`, (evt) => {
+  PubSub.subscribe('GuessWho:questions-data-loaded', (evt) => {
     const questionsData = evt.detail;
-    console.log('Moo!', questionsData);
     this.populateSelect(questionsData);
     //A: there's something wrong with the way we're calling populateSelect
   });
@@ -37,6 +36,7 @@ SelectView.prototype.createQuestionOption = function (question, index) {
   const option = document.createElement('option'); //creates a tag option for the select
   option.textContent = question.question; //sets the textContent to be a question
   option.value = index; //sets the value to be whatever index the question is
+  option.value = question.question; //sets the value to be whatever index the question is
   return option;
 };
 
