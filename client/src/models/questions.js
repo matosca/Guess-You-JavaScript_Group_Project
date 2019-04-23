@@ -1,4 +1,3 @@
-const Characters = require('./characters.js');
 const PubSub = require('../helpers/pub_sub.js');
 const RequestHelper = require("../helpers/request.js");
 
@@ -7,12 +6,15 @@ const Questions = function (url){
   this.url = url;
   this.request = new RequestHelper(this.url);
   this.allQuestions = null;
-  this.characters = new Characters();
+  this.characters = null;
 };
 
 Questions.prototype.bindEventsQuestions = function () {
   PubSub.subscribe('SelectView:question-selected', (evt) => {
     this.getResult(evt.detail);
+  });
+  PubSub.subscribe('Characters:characters-data-loaded', (evt) => {
+    this.characters = evt.detail;
   });
 };
 
@@ -31,18 +33,14 @@ Questions.prototype.findQuestionByContent = function (questionContent) {
 
 Questions.prototype.getResult = function (questionContent) {
   const selectedQuestion = this.findQuestionByContent(questionContent);
-  PubSub.subscribe('Characters:characters-data-loaded', (evt) => {
-    console.log('hello from get result, after sub');
-    const charactersData = evt.detail;
-    console.log(charactersData);
   const relatedKey = selectedQuestion.related_key;
   const attribute = selectedQuestion.attribute;
-  let charactersToEliminate = charactersData.getCharactersToEliminate(relatedKey, attribute);
+  PubSub.publish('Questions:get-results-send-question-information', relatedKey, attribute);
+  let charactersToEliminate = this.characters.getCharactersToEliminate(relatedKey, attribute);
   //console.log(charactersToEliminate);
-  const updatedCards = charactersData.updateCards(charactersToEliminate);
+  const updatedCards = this.characters.updateCards(charactersToEliminate);
   //console.log(updatedCards);
   PubSub.publish('Characters:characters-data-loaded', updatedCards);
-  });
 };
 
 // Questions.prototype.getSelectedQuestion = function (questionContent) {
