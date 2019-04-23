@@ -35,6 +35,7 @@ Questions.prototype.getResult = function (questionContent) {
   const selectedQuestion = this.findQuestionByContent(questionContent);
   const relatedKey = selectedQuestion.related_key;
   const attribute = selectedQuestion.attribute;
+  PubSub.publish('Questions:get-results-send-question-information', relatedKey, attribute);
   let charactersToEliminate = this.characters.getCharactersToEliminate(relatedKey, attribute);
   //console.log(charactersToEliminate);
   const updatedCards = this.characters.updateCards(charactersToEliminate);
