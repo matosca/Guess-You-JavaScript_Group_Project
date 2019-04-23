@@ -34,8 +34,15 @@ GameResultView.prototype.renderResult = function (guessedCard) {
     this.container.appendChild(resultBox);
   }
   else {
-    const resultMessage = this.createElement('h2', `You guessed wrong! It was ${this.hiddenCharacter.name}. You lose!`);
+    const resultMessage = this.createElement('h2', `${guessedCard.name} is wrong! It was ${this.hiddenCharacter.name}. You lose!`);
     this.container.appendChild(resultMessage);
+
+    // const resultBox = document.createElement('div');
+    // resultBox.classList.add('result');
+
+    const hiddenCharacter = document.createElement('img');
+    hiddenCharacter.src = this.hiddenCharacter.image_url;
+    this.container.appendChild(hiddenCharacter);
   };
 
 };
