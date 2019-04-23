@@ -9,6 +9,11 @@ CardsGridView.prototype.bindEvents = function () {
     const charactersData = evt.detail;
     this.render(charactersData);
   });
+  PubSub.subscribe('Characters:updated-characters-data-loaded', (evt) => {
+    const updatedCharactersData = evt.detail;
+    console.log('updated chars', updatedCharactersData);
+    this.render(updatedCharactersData);
+  });
 };
 
 CardsGridView.prototype.render = function (charactersData) {
