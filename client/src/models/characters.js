@@ -41,20 +41,19 @@ Characters.prototype.getData = function () {
     PubSub.publish('Characters:characters-data-loaded', gameData);
     const hiddenCharacter = this.getHiddenCharacter();
     this.hiddenCharacter = hiddenCharacter;
+    PubSub.publish('Characters:hidden-character-selected', hiddenCharacter);
     console.log('hidden char', hiddenCharacter);
   })
   .catch( (err) => console.error(err) );
 };
 
 Characters.prototype.getCharactersToEliminate = function () {
-  // const charactersToEliminate = [];
   const characters = this.characters;
   if (this.attribute === this.hiddenCharacter[this.relatedKey]){
     for (let character of characters){
       if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
         character.inplay = "false";
         character.image_url = "../images/monster.png";
-        // charactersToEliminate.push(character);
       };
     };
   }
@@ -63,12 +62,10 @@ Characters.prototype.getCharactersToEliminate = function () {
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";
         character.image_url = "../images/monster.png";
-        // charactersToEliminate.push(character);
       };
     };
   };
   this.finalCard();
-  // return charactersToEliminate;
 };
 
 Characters.prototype.getHiddenCharacter = function() {
