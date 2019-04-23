@@ -1,0 +1,22 @@
+#game-heading{
+
+};
+
+#result-container{
+
+}
+
+#game-container{
+
+}
+
+.character-grid {
+  display: grid; /* This displays the class in a grid */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Splitting the grid into 5 columns of 1 fraction */
+  grid-gap: 5px; /* This acts as a margin between the cards */
+  margin: 30px; /* this covers all margins*/
+}
+
+.question-container{
+
+}
