@@ -24,7 +24,6 @@ SelectView.prototype.populateSelect = function (questionsData) {
   questionsData.forEach( (question, index) => {
     // const selectDropdown = document.querySelector('select#questions'); //selects the element 'select' from the DOM
     const option = this.createQuestionOption(question, index);
-
     // console.log('this are the options', option);
 
     this.select.appendChild(option);//creates the options to populate the select
