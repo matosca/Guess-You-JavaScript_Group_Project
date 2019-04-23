@@ -35,16 +35,43 @@ Characters.prototype.getData = function () {
 Characters.prototype.getCharactersToEliminate = function () {
   const charactersToEliminate = [];
   const characters = this.characters;
-  for (let character of characters){
-    if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]) { //related key to be accessed
-console.log(`${this.hiddenCharacter[this.relatedKey]}`);
-      charactersToEliminate.push(character);
+  console.log('hidden char', this.hiddenCharacter);
+  if (this.attribute === this.hiddenCharacter[this.relatedKey]){
+    for (let character of characters){
+      if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
+        charactersToEliminate.push(character);
+      };
     };
-    console.log(this.hiddenCharacter);
-    console.log("attribute", this.attribute);
-    console.log(charactersToEliminate);
+  }
+  else {
+    for (let character of characters){
+      if (character[this.relatedKey] === this.attribute){
+        charactersToEliminate.push(character);
+      };
+    };
   };
-  return charactersToEliminate;
+//   for (let character of characters){
+//     if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey] && this.attribute === character[this.relatedKey]) { //related key to be accessed
+//       console.log('hidden char', this.hiddenCharacter);
+//       console.log('relatedKey from q', this.relatedKey);
+//       charactersToEliminate.push(character);
+//       console.log('chars to elim', charactersToEliminate);
+//     }
+//     else if (character[this.relatedKey] === this.hiddenCharacter[this.relatedKey]){
+//       for (let character of characters){
+//         if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey] && this.attribute === character[this.relatedKey]) {
+//           charactersToEliminate.push(character);
+//         };
+//       };
+//     };
+//   };
+// };
+console.log('chars to elim', charactersToEliminate);
+return charactersToEliminate;
+};
+
+Characters.prototype.charactersEliminateForLoop = function () {
+
 };
 
 Characters.prototype.getHiddenCharacter = function() {
