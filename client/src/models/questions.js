@@ -33,14 +33,16 @@ Questions.prototype.findQuestionByContent = function (questionContent) {
 
 Questions.prototype.getResult = function (questionContent) {
   const selectedQuestion = this.findQuestionByContent(questionContent);
-  const relatedKey = selectedQuestion.related_key;
-  const attribute = selectedQuestion.attribute;
-  PubSub.publish('Questions:get-results-send-question-information', relatedKey, attribute);
-  let charactersToEliminate = this.characters.getCharactersToEliminate(relatedKey, attribute);
-  //console.log(charactersToEliminate);
-  const updatedCards = this.characters.updateCards(charactersToEliminate);
-  //console.log(updatedCards);
-  PubSub.publish('Characters:characters-data-loaded', updatedCards);
+  const questionInfo = {
+    relatedKey: selectedQuestion.related_key,
+    attribute: selectedQuestion.attribute
+  }
+  PubSub.publish('Questions:get-results-send-question-information', questionInfo);
+  // let charactersToEliminate = this.characters.getCharactersToEliminate(relatedKey, attribute);
+  // //console.log(charactersToEliminate);
+  // const updatedCards = this.characters.updateCards(charactersToEliminate);
+  // //console.log(updatedCards);
+  // PubSub.publish('Characters:characters-data-loaded', updatedCards);
 };
 
 // Questions.prototype.getSelectedQuestion = function (questionContent) {
