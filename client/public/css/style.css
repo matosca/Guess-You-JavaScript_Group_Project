@@ -1,0 +1,21 @@
+#game-heading{
+
+};
+
+#result-container{
+
+}
+
+#game-container{
+
+}
+
+.character-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.question-container{
+
+}
