@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const apiUrl = 'http://localhost:3000/api';
 
-  const questionsGame = new Questions( `${apiUrl}/questions` );
-  questionsGame.bindEventsQuestions();
-  questionsGame.getData();
-
   const charactersGame = new Characters(`${apiUrl}/characters` );
   charactersGame.bindEventsCharacters();
   charactersGame.getData();
 
+  const questionsGame = new Questions( `${apiUrl}/questions` );
+  questionsGame.bindEventsQuestions();
+  questionsGame.getData();
+  
 });
