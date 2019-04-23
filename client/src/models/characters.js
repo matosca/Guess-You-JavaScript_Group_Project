@@ -14,11 +14,14 @@ Characters.prototype.bindEventsCharacters = function () {
   PubSub.subscribe('Questions:get-results-send-question-information', (evt) => {
     this.relatedKey = evt.detail.relatedKey;
     this.attribute = evt.detail.attribute;
-    let charactersToEliminate = this.getCharactersToEliminate();
-    console.log('hidden', this.hiddenCharacter);
-    console.log('chars to elim', charactersToEliminate);
-    PubSub.publish('Characters:updated-characters-data-loaded', charactersToEliminate);
+    this.getCharactersToEliminate();
+    PubSub.publish('Characters:characters-data-loaded', this.characters);
   });
+  // if and for to check of one card left and if so show game_result_view
+};
+
+Characters.prototype.updateCharacters = function () {
+
 };
 
 Characters.prototype.getData = function () {
@@ -33,14 +36,14 @@ Characters.prototype.getData = function () {
 };
 
 Characters.prototype.getCharactersToEliminate = function () {
-  const charactersToEliminate = [];
+  // const charactersToEliminate = [];
   const characters = this.characters;
   if (this.attribute === this.hiddenCharacter[this.relatedKey]){
     for (let character of characters){
       if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
         character.inplay = "false";
-        // character.image_url = "";
-        charactersToEliminate.push(character);
+        character.image_url = "../images/monster.png";
+        // charactersToEliminate.push(character);
       };
     };
   }
@@ -48,12 +51,12 @@ Characters.prototype.getCharactersToEliminate = function () {
     for (let character of characters){
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";
-        // character.image_url = "";
-        charactersToEliminate.push(character);
+        character.image_url = "../images/monster.png";
+        // charactersToEliminate.push(character);
       };
     };
   };
-return charactersToEliminate;
+// return charactersToEliminate;
 };
 
 Characters.prototype.getHiddenCharacter = function() {
