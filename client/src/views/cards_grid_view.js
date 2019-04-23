@@ -9,14 +9,15 @@ CardsGridView.prototype.bindEvents = function () {
     const charactersData = evt.detail;
     this.render(charactersData);
   });
-  PubSub.subscribe('Characters:updated-characters-data-loaded', (evt) => {
-    const updatedCharactersData = evt.detail;
-    console.log('updated chars', updatedCharactersData);
-    this.render(updatedCharactersData);
-  });
+  // PubSub.subscribe('Characters:updated-characters-data-loaded', (evt) => {
+  //   const updatedCharactersData = evt.detail;
+  //   console.log('updated chars', updatedCharactersData);
+  //   this.render(updatedCharactersData);
+  // });
 };
 
 CardsGridView.prototype.render = function (charactersData) {
+  this.container.innerHTML = "";
   charactersData.forEach( (card) => {
     const cardContainer = this.createCards(card); //this creates every card in the format from below
     this.container.appendChild(cardContainer); //appending each card into the main container
