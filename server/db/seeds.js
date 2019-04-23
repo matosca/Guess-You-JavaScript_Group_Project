@@ -159,6 +159,7 @@ db.characters.insertMany(
       facial_hair: 'true',
       daddy_disappointed: ''
     },
+    {
       name: 'Bernard',
       inplay: 'true',
       image_url: '../images/bernard.png',
@@ -170,6 +171,7 @@ db.characters.insertMany(
       facial_hair: 'false',
       daddy_disappointed: ''
     },
+    {
       name: 'Bill',
       inplay: 'true',
       image_url: '../images/bill.png',
@@ -181,6 +183,7 @@ db.characters.insertMany(
       facial_hair: 'true',
       daddy_disappointed: ''
     },
+    {
       name: 'Charles',
       inplay: 'true',
       image_url: '../images/charles.png',
@@ -192,6 +195,7 @@ db.characters.insertMany(
       facial_hair: 'true',
       daddy_disappointed: ''
     },
+    {
       name: 'Frans',
       inplay: 'true',
       image_url: '../images/frans.png',
@@ -203,6 +207,7 @@ db.characters.insertMany(
       facial_hair: 'false',
       daddy_disappointed: ''
     },
+    {
       name: 'Joe',
       inplay: 'true',
       image_url: '../images/joe.png',
@@ -214,6 +219,7 @@ db.characters.insertMany(
       facial_hair: 'false',
       daddy_disappointed: ''
     },
+    {
       name: 'Max',
       inplay: 'true',
       image_url: '../images/joe.png',
@@ -225,6 +231,7 @@ db.characters.insertMany(
       facial_hair: 'true',
       daddy_disappointed: ''
     },
+    {
       name: 'Paul',
       inplay: 'true',
       image_url: '../images/paul.png',
@@ -236,6 +243,7 @@ db.characters.insertMany(
       facial_hair: 'false',
       daddy_disappointed: ''
     },
+    {
       name: 'Peter',
       inplay: 'true',
       image_url: '../images/peter.png',
@@ -247,6 +255,7 @@ db.characters.insertMany(
       facial_hair: 'false',
       daddy_disappointed: ''
     },
+    {
       name: 'Phillip',
       inplay: 'true',
       image_url: '../images/phillip.png',
@@ -258,6 +267,7 @@ db.characters.insertMany(
       facial_hair: 'true',
       daddy_disappointed: ''
     },
+    {
       name: 'Richard',
       inplay: 'true',
       image_url: '../images/richard.png',
@@ -269,6 +279,7 @@ db.characters.insertMany(
       facial_hair: 'true',
       daddy_disappointed: ''
     },
+    {
       name: 'Sam',
       inplay: 'true',
       image_url: '../images/sam.png',
@@ -280,17 +291,18 @@ db.characters.insertMany(
       facial_hair: 'false',
       daddy_disappointed: ''
     },
-    name: 'Tom',
-    inplay: 'true',
-    image_url: '../images/tom.png',
-    hair_colour: 'brown',
-    eye_colour: 'blue',
-    gender: 'm',
-    hat: 'false',
-    glasses: 'true',
-    facial_hair: 'false',
-    daddy_disappointed: ''
-  }
+    {
+      name: 'Tom',
+      inplay: 'true',
+      image_url: '../images/tom.png',
+      hair_colour: 'brown',
+      eye_colour: 'blue',
+      gender: 'm',
+      hat: 'false',
+      glasses: 'true',
+      facial_hair: 'false',
+      daddy_disappointed: ''
+    }
   ]
 );
 
