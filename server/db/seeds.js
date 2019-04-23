@@ -222,7 +222,7 @@ db.characters.insertMany(
     {
       name: 'Max',
       inplay: 'true',
-      image_url: '../images/joe.png',
+      image_url: '../images/max.png',
       hair_colour: 'brown',
       eye_colour: 'brown',
       gender: 'm',
@@ -256,9 +256,9 @@ db.characters.insertMany(
       daddy_disappointed: ''
     },
     {
-      name: 'Phillip',
+      name: 'Philip',
       inplay: 'true',
-      image_url: '../images/phillip.png',
+      image_url: '../images/philip.png',
       hair_colour: 'brown',
       eye_colour: 'brown',
       gender: 'm',

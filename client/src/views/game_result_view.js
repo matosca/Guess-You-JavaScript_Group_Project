@@ -5,8 +5,11 @@ const GameResultView = function (container) {
 };
 
 GameResultView.prototype.bindEvents = function () {
-  PubSub.subscribe('GuessWho:guessed-card-result', (evt) => {
+  PubSub.subscribe('Characters:guessed-card-result', (evt) => {
     const resultedCard = evt.detail;
+    console.log('result card', resultedCard);
+    const gameContainer = document.querySelector('#game-container');
+    gameContainer.innerHTML = "";
     this.renderResult(resultedCard);
   });
 };

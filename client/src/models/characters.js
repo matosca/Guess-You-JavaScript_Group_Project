@@ -17,11 +17,21 @@ Characters.prototype.bindEventsCharacters = function () {
     this.getCharactersToEliminate();
     PubSub.publish('Characters:characters-data-loaded', this.characters);
   });
-  // if and for to check of one card left and if so show game_result_view
 };
 
-Characters.prototype.updateCharacters = function () {
+Characters.prototype.finalCard = function () {
+  let inplayCounter = 0;
+  for (let character of this.characters)  {
+    console.log('character in finalCArd', character);
+    if (character.inplay === 'true'){
+      inplayCounter += 1;
+      console.log('inplay counter', inplayCounter);
+    };
+  };
 
+  if ( inplayCounter === 1 ){
+    PubSub.publish('Characters:guessed-card-result', this.hiddenCharacter);
+  };
 };
 
 Characters.prototype.getData = function () {
@@ -31,6 +41,7 @@ Characters.prototype.getData = function () {
     PubSub.publish('Characters:characters-data-loaded', gameData);
     const hiddenCharacter = this.getHiddenCharacter();
     this.hiddenCharacter = hiddenCharacter;
+    console.log('hidden char', hiddenCharacter);
   })
   .catch( (err) => console.error(err) );
 };
@@ -56,7 +67,8 @@ Characters.prototype.getCharactersToEliminate = function () {
       };
     };
   };
-// return charactersToEliminate;
+  this.finalCard();
+  // return charactersToEliminate;
 };
 
 Characters.prototype.getHiddenCharacter = function() {
