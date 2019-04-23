@@ -31,6 +31,11 @@ CardsGridView.prototype.createCards = function (card) {
 
   const characterImg = document.createElement('img');//creating tag img in html
   characterImg.src = card.image_url;//setting the src to be the card's url from the database
+  characterImg.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    const guessedCard = card;
+    PubSub.publish('Characters:guessed-card-result', guessedCard);
+  })
 
   cardContainer.appendChild(characterImg); //appending the img into the container
   return cardContainer;
