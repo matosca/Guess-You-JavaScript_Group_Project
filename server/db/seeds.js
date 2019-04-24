@@ -456,7 +456,7 @@ db.characters.insertMany(
     {
       name: 'Colin',
       inplay: 'true',
-      image_url: '../images/colin .jpg',
+      image_url: '../images/colin.jpg',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'true',
