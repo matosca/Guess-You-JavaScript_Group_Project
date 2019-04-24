@@ -47,35 +47,10 @@ Characters.prototype.getData = function () {
   .catch( (err) => console.error(err) );
 };
 
-// ALERT BOX
-function CustomAlert(){
-
-  this.ok = function(){
-    document.getElementById('dialogbox').style.display = "none";
-    document.getElementById('dialogoverlay').style.display = "none";
-  };
-
-  this.render = function(dialog){
-    var winW = window.innerWidth;
-    var winH = window.innerHeight;
-    var dialogoverlay = document.getElementById('dialogoverlay');
-    var dialogbox = document.getElementById('dialogbox');
-    dialogoverlay.style.display = "block";
-    dialogoverlay.style.height = winH+"px";
-    dialogbox.style.left = (winW/2) - (550 * .5)+"px";
-    dialogbox.style.top = "100px";
-    dialogbox.style.display = "block";
-    // document.getElementById('dialogboxhead').innerHTML = "";
-    document.getElementById('dialogboxbody').innerHTML = dialog;
-    document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">OK</button>';
-  };
-};
-
 Characters.prototype.getCharactersToEliminate = function () {
   const characters = this.characters;
   if (this.attribute === this.hiddenCharacter[this.relatedKey]){
-    const Alert = new CustomAlert();
-    Alert.render("Yes!");
+    alert("Yes!");
     for (let character of characters){
       if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
         character.inplay = "false";
@@ -84,8 +59,7 @@ Characters.prototype.getCharactersToEliminate = function () {
     };
   }
   else {
-    const Alert = new CustomAlert();
-    Alert.render("No!");
+    alert("No!");
     for (let character of characters){
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";
