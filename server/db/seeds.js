@@ -6,7 +6,11 @@ db.characters.insertMany(
     {
       name: 'Amy',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/amy.png',
+=======
+      image_url: '../images/amy.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -24,7 +28,11 @@ db.characters.insertMany(
     {
       name: 'Maria',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/maria.png',
+=======
+      image_url: '../images/maria.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -42,7 +50,11 @@ db.characters.insertMany(
     {
       name: 'Mark King',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '.../e29_imgages/markk.png',
+=======
+      image_url: '../images/markk.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'true',
@@ -60,7 +72,11 @@ db.characters.insertMany(
     {
       name: 'David',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/david.png',
+=======
+      image_url: '../images/david.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -78,7 +94,11 @@ db.characters.insertMany(
     {
       name: 'Pim',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/pim.png',
+=======
+      image_url: '../images/pim.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -96,7 +116,11 @@ db.characters.insertMany(
     {
       name: 'Eric',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/eric.png',
+=======
+      image_url: '../images/eric.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'blonde',
       gender: 'm',
       glasses: 'false',
@@ -114,7 +138,11 @@ db.characters.insertMany(
     {
       name: 'Grant',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/grant.png',
+=======
+      image_url: '../images/grant.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'red',
       gender: 'm',
       glasses: 'false',
@@ -132,7 +160,11 @@ db.characters.insertMany(
     {
       name: 'Alasdair',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/alasdair.png',
+=======
+      image_url: '../images/alasdair.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -150,7 +182,11 @@ db.characters.insertMany(
     {
       name: 'Emily',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/emily.png',
+=======
+      image_url: '../images/emily.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -168,7 +204,11 @@ db.characters.insertMany(
     {
       name: 'Mark Mackay',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/markm.png',
+=======
+      image_url: '../images/markm.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'shaved',
       gender: 'm',
       glasses: 'false',
@@ -186,7 +226,11 @@ db.characters.insertMany(
     {
       name: 'Charlie',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/charlie.png',
+=======
+      image_url: '../images/charlie.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -204,7 +248,11 @@ db.characters.insertMany(
     {
       name: 'Rory',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/rory.png',
+=======
+      image_url: '../images/rory.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'shaved',
       gender: 'm',
       glasses: 'false',
@@ -222,7 +270,11 @@ db.characters.insertMany(
     {
       name: 'Stephen',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/stephen.png',
+=======
+      image_url: '../images/stephen.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'shaved',
       gender: 'm',
       glasses: 'false',
@@ -238,14 +290,36 @@ db.characters.insertMany(
       noise: 'false'
     },
     {
+      name: 'Colin',
+      inplay: 'true',
+      image_url: '../images/colin.jpg',
+      hair_colour: 'brunette',
+      gender: 'm',
+      glasses: 'true',
+      facial_hair: 'false',
+      uk: 'true',
+      singer: 'false',
+      vape: 'false',
+      nickname: 'false',
+      standup: 'true',
+      model: 'false',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noise: 'false'
+    },
+    {
       name: 'Lidia',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/lidia.png',
+=======
+      image_url: '../images/lidia.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'red',
       gender: 'f',
       glasses: 'false',
       facial_hair: 'false',
-      uk: 'true',
+      uk: 'false',
       singer: 'false',
       vape: 'false',
       nickname: 'false',
@@ -256,14 +330,36 @@ db.characters.insertMany(
       noise: 'false'
     },
     {
+      name: 'Pawel',
+      inplay: 'true',
+      image_url: '../images/pawel.jpg',
+      hair_colour: 'red',
+      gender: 'm',
+      glasses: 'false',
+      facial_hair: 'true',
+      uk: 'false',
+      singer: 'false',
+      vape: 'false',
+      nickname: 'false',
+      standup: 'true',
+      model: 'false',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noise: 'true'
+    },
+    {
       name: 'Ben',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/ben.png',
+=======
+      image_url: '../images/ben.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'red',
       gender: 'm',
       glasses: 'false',
       facial_hair: 'false',
-      uk: 'true',
+      uk: 'false',
       singer: 'false',
       vape: 'true',
       nickname: 'false',
@@ -276,7 +372,11 @@ db.characters.insertMany(
     {
       name: 'Jon',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/jon.png',
+=======
+      image_url: '../images/jon.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -292,9 +392,31 @@ db.characters.insertMany(
       noise: 'false'
     },
     {
+      name: 'Jarrod',
+      inplay: 'true',
+      image_url: '../images/jarrod.jpg',
+      hair_colour: 'red',
+      gender: 'm',
+      glasses: 'false',
+      facial_hair: 'false',
+      uk: 'true',
+      singer: 'false',
+      vape: 'true',
+      nickname: 'false',
+      standup: 'true',
+      model: 'false',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noise: 'false'
+    },
+    {
       name: 'Rob',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/rob.png',
+=======
+      image_url: '../images/rob.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -312,7 +434,11 @@ db.characters.insertMany(
     {
       name: 'Jenn',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/jenn.png',
+=======
+      image_url: '../images/jen.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -330,7 +456,11 @@ db.characters.insertMany(
     {
       name: 'Matt',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '.../e29_imgages/matt.png',
+=======
+      image_url: '../images/matt.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'true',
@@ -348,7 +478,11 @@ db.characters.insertMany(
     {
       name: 'Annabel',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/annabel.png',
+=======
+      image_url: '../images/annabel.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'red',
       gender: 'f',
       glasses: 'false',
@@ -364,9 +498,31 @@ db.characters.insertMany(
       noise: 'false'
     },
     {
+      name: 'Juan',
+      inplay: 'true',
+      image_url: '../images/juan.jpg',
+      hair_colour: 'brunette',
+      gender: 'm',
+      glasses: 'true',
+      facial_hair: 'false',
+      uk: 'false',
+      singer: 'false',
+      vape: 'false',
+      nickname: 'false',
+      standup: 'true',
+      model: 'false',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noise: 'false'
+    },
+    {
       name: 'Kat',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/kat.png',
+=======
+      image_url: '../images/kat.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -384,7 +540,11 @@ db.characters.insertMany(
     {
       name: 'Myriam',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/myriam.png',
+=======
+      image_url: '../images/myriam.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -402,7 +562,11 @@ db.characters.insertMany(
     {
       name: 'Becky',
       inplay: 'true',
+<<<<<<< HEAD
       image_url: '../e29_imgages/becky.png',
+=======
+      image_url: '../images/becky.jpg',
+>>>>>>> a8fcacae6943f160b79b8832e921671b2e5aa619
       hair_colour: 'blonde',
       gender: 'f',
       glasses: 'false',
@@ -438,7 +602,7 @@ db.questions.insertMany(
       id: 3,
       question: "Does the character have brunette hair?",
       related_key: "hair_colour",
-      attribute: "brown"
+      attribute: "brunette"
     },
     {
       id: 4,

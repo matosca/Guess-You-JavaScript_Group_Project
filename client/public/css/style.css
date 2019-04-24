@@ -6,6 +6,7 @@ body{
 text-align: center; /* This moves our menu to the centre of the page */
 font-family: 'Luckiest Guy', cursive;
 font-size: 2.5em; /* The font has been sized using em which is a better way of sizing for viewing on mobile devices */
+color: #f0e8e8;
 };
 
 #result-container{
@@ -13,7 +14,14 @@ font-size: 2.5em; /* The font has been sized using em which is a better way of s
 }
 #result-container h2{
   font-size: 2em;
-  color: #ffffff;
+  color: #f0e8e8;
+}
+#result-container img{
+  width: 250px;
+}
+.play{
+  color: #f0e8e8;
+  clear: both;
 }
 
 #game-container{
@@ -26,15 +34,69 @@ font-size: 2.5em; /* The font has been sized using em which is a better way of s
   margin: 30px; /* this covers all margins*/
   text-align: center;
   background-color: #ffffff; /* This moves our menu to the centre of the page */
-  border-radius: 1em;
-  border: 0.2em solid #F0BE37;
+  border-radius: 1em; /* Rounds the corners of the border */
+  border: 0.2em solid #F0BE37; /* First element is the thickness of the border line then how the border is styled which is solid and then applied colour*/
   padding: 1em;
 }
 
 .question-container{
   text-align: center; /* This moves our menu to the centre of the page */
   font-size: 1.6em; /* The font has been sized using em which is a better way of sizing for viewing on mobile devices */
-  font-family: 'Lato', sans-serif,;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #f0e8e8;
+}
+.card img{
+  height: auto;
+  width: 200px;
+  height: 250px;
+  /* Whatever the width is set to, the height will match to make sure the dimensions are not out of sync.  This can be applied the other way around */
+}
+
+/* BLINKING TEXT */
+.blink {
+	-webkit-animation: blink .75s linear infinite;
+	-moz-animation: blink .75s linear infinite;
+	-ms-animation: blink .75s linear infinite;
+	-o-animation: blink .75s linear infinite;
+	 animation: blink 1.75s linear infinite;
+  color: #f0e8e8;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+/* PLAY AGAIN LINK */
+.play {
+  display: block;
+  color: #f0e8e8;
 }
 
 /* BLINKING TEXT */
