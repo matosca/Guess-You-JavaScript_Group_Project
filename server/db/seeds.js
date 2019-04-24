@@ -6,7 +6,7 @@ db.characters.insertMany(
     {
       name: 'Amy',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/amy.jpg',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -24,7 +24,7 @@ db.characters.insertMany(
     {
       name: 'Maria',
       inplay: 'true',
-      image_url: '../images/maria2.png',
+      image_url: '../images/maria.jpg',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -42,7 +42,7 @@ db.characters.insertMany(
     {
       name: 'Mark King',
       inplay: 'true',
-      image_url: '../images/markk29.png',
+      image_url: '../images/markk.jpg',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'true',
@@ -60,7 +60,7 @@ db.characters.insertMany(
     {
       name: 'David',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/david.jpg',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -78,7 +78,7 @@ db.characters.insertMany(
     {
       name: 'Pim',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/pim.jpg',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -96,7 +96,7 @@ db.characters.insertMany(
     {
       name: 'Eric',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/eric.jpg',
       hair_colour: 'blonde',
       gender: 'm',
       glasses: 'false',
@@ -114,7 +114,7 @@ db.characters.insertMany(
     {
       name: 'Grant',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/grant.jpg',
       hair_colour: 'red',
       gender: 'm',
       glasses: 'false',
@@ -132,7 +132,7 @@ db.characters.insertMany(
     {
       name: 'Alasdair',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/alasdair.jpg',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -150,7 +150,7 @@ db.characters.insertMany(
     {
       name: 'Emily',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/emily.jpg',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -168,7 +168,7 @@ db.characters.insertMany(
     {
       name: 'Mark Mackay',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/markm.jpg',
       hair_colour: 'shaved',
       gender: 'm',
       glasses: 'false',
@@ -186,7 +186,7 @@ db.characters.insertMany(
     {
       name: 'Charlie',
       inplay: 'true',
-      image_url: '../images/charlie29.png',
+      image_url: '../images/charlie.jpg',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -204,7 +204,7 @@ db.characters.insertMany(
     {
       name: 'Rory',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/rory.jpg',
       hair_colour: 'shaved',
       gender: 'm',
       glasses: 'false',
@@ -222,7 +222,7 @@ db.characters.insertMany(
     {
       name: 'Stephen',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/stephen.jpg',
       hair_colour: 'shaved',
       gender: 'm',
       glasses: 'false',
@@ -240,7 +240,7 @@ db.characters.insertMany(
     {
       name: 'Lidia',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/lidia.jpg',
       hair_colour: 'red',
       gender: 'f',
       glasses: 'false',
@@ -258,7 +258,7 @@ db.characters.insertMany(
     {
       name: 'Ben',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/ben.jpg',
       hair_colour: 'red',
       gender: 'm',
       glasses: 'false',
@@ -276,7 +276,7 @@ db.characters.insertMany(
     {
       name: 'Jon',
       inplay: 'true',
-      image_url: '../images/jon29.png',
+      image_url: '../images/jon.jpg',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -294,7 +294,7 @@ db.characters.insertMany(
     {
       name: 'Rob',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/rob.jpg',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -312,7 +312,7 @@ db.characters.insertMany(
     {
       name: 'Jenn',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/jen.jpg',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -330,7 +330,7 @@ db.characters.insertMany(
     {
       name: 'Matt',
       inplay: 'true',
-      image_url: '../images/matt2.jpg',
+      image_url: '../images/matt.jpg',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'true',
@@ -348,7 +348,7 @@ db.characters.insertMany(
     {
       name: 'Annabel',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/annabel.jpg',
       hair_colour: 'red',
       gender: 'f',
       glasses: 'false',
@@ -366,7 +366,7 @@ db.characters.insertMany(
     {
       name: 'Kat',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/kat.jpg',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -384,7 +384,7 @@ db.characters.insertMany(
     {
       name: 'Myriam',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/myriam.jpg',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -402,7 +402,7 @@ db.characters.insertMany(
     {
       name: 'Becky',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/becky.jpg',
       hair_colour: 'blonde',
       gender: 'f',
       glasses: 'false',
