@@ -15,6 +15,7 @@ Questions.prototype.bindEventsQuestions = function () {
   PubSub.subscribe('SelectView:question-selected', (evt) => {
     this.turnLimitdown() //a questions had been recieved so call the function to lower the turn limit by one. this is a function so it will be easier to publish the information directly to card grid view from question.js(a channel which doesn't exist yet)
     this.getResult(evt.detail);
+
   });
   PubSub.subscribe('Characters:characters-data-loaded', (evt) => {
     this.characters = evt.detail;

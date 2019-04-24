@@ -48,6 +48,7 @@ Characters.prototype.getData = function () {
 Characters.prototype.getCharactersToEliminate = function () {
   const characters = this.characters;
   if (this.attribute === this.hiddenCharacter[this.relatedKey]){
+    alert("Yes!");
     for (let character of characters){
       if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
         character.inplay = "false";
@@ -56,6 +57,7 @@ Characters.prototype.getCharactersToEliminate = function () {
     };
   }
   else {
+    alert("No!");
     for (let character of characters){
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";
@@ -70,5 +72,6 @@ Characters.prototype.getHiddenCharacter = function() {
   let hiddenCharacter = this.characters[Math.floor(Math.random()*this.characters.length)];
   return hiddenCharacter;
 };
+
 
 module.exports = Characters;
