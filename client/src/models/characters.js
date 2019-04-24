@@ -22,10 +22,8 @@ Characters.prototype.bindEventsCharacters = function () {
 Characters.prototype.finalCard = function () {
   let inplayCounter = 0;
   for (let character of this.characters)  {
-    console.log('character in finalCArd', character);
     if (character.inplay === 'true'){
       inplayCounter += 1;
-      console.log('inplay counter', inplayCounter);
     };
   };
 
@@ -50,6 +48,8 @@ Characters.prototype.getData = function () {
 Characters.prototype.getCharactersToEliminate = function () {
   const characters = this.characters;
   if (this.attribute === this.hiddenCharacter[this.relatedKey]){
+    const questionResponse = document.querySelector("#question-response");
+    questionResponse.textContent = "YES!";
     for (let character of characters){
       if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
         character.inplay = "false";
@@ -58,6 +58,8 @@ Characters.prototype.getCharactersToEliminate = function () {
     };
   }
   else {
+    const questionResponse = document.querySelector("#question-response");
+    questionResponse.textContent = "NO!";
     for (let character of characters){
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";
@@ -72,5 +74,6 @@ Characters.prototype.getHiddenCharacter = function() {
   let hiddenCharacter = this.characters[Math.floor(Math.random()*this.characters.length)];
   return hiddenCharacter;
 };
+
 
 module.exports = Characters;
