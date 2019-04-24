@@ -24,7 +24,7 @@ db.characters.insertMany(
     {
       name: 'Maria',
       inplay: 'true',
-      image_url: '../images/maria29.png',
+      image_url: '../images/maria2.png',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -330,7 +330,7 @@ db.characters.insertMany(
     {
       name: 'Matt',
       inplay: 'true',
-      image_url: '../images/matt29.png',
+      image_url: '../images/matt2.jpg',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'true',
