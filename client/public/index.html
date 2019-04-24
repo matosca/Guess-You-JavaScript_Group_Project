@@ -6,14 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Guess Who</title>
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Luckiest+Guy" rel="stylesheet">
   <script src="js/bundle.js"></script>
 </head>
 <body>
-
   <header id="game-heading">
     <h1>Guess Who?</h1>
+    <div id= "turnRemaining">
+      <h2> "You have 10 turns remaining" </h2>
+    </div>
   </header>
-  <div id="result-container"></div>
+  <div id="result-container" style="text-align: -webkit-center"></div>
 
   <section id="game-container">
 
@@ -26,6 +29,8 @@
         </select>
         <input type="submit" name="submit" value="Select">
       </form>
+
+      <p id="question-response" class="blink"></p>
 
     </div>
 

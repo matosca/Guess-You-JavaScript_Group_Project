@@ -17,11 +17,11 @@
 }
 
 #welcoming h1 {
-  font-family: 'Bangers', cursive;
+  font-family: 'Luckiest Guy', cursive;
   font-size: 5em;
   position: relative;
-  top: 5em;
-  left: 4em;
+  top: 5.7em;
+  left: 4.4em;
 }
 
 #welcoming a {
@@ -30,8 +30,8 @@
   background-color: rgb(109, 0, 202);
   color: rgb(252,195, 9);
   font-size: 2em;
-  top: 14em;
-  left: 13.5em;
+  top: 15em;
+  left: 12.8em;
   border: 1px solid rgb(252,195, 9);
   border-radius: 6px;
   -webkit-box-shadow: 3px 2px 12px -1px rgba(0,0,0,0.5);
