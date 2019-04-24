@@ -13,7 +13,11 @@ const Questions = function (url){
 
 Questions.prototype.bindEventsQuestions = function () {
   PubSub.subscribe('SelectView:question-selected', (evt) => {
+<<<<<<< HEAD
+    this.turnLimitdown() //a questions had been recieved so call the function to lower the turn limit by one. this is a function so it will be easier to publish the information directly to card grid view from question.js(a channel which doesn't exist yet)
+=======
     const turnlimit = this.turnLimitdown() //a questions had been recieved so call the function to lower the turn limit by one. this is a function so it will be easier to publish the information directly to card grid view from question.js(a channel which doesn't exist yet)
+>>>>>>> 290e38361ae96822d02426a1b54ad54382602333
     this.getResult(evt.detail);
 
   });
