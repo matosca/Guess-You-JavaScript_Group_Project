@@ -14,7 +14,7 @@ CardsGridView.prototype.bindEvents = function () {
   //   console.log('updated chars', updatedCharactersData);
   //   this.render(updatedCharactersData);
   // });
-  PubSub.subscribe('Questions:turns-remainging', (evt) => {
+  PubSub.subscribe('Questions:turns-remaining', (evt) => {
     const turnRemaining = evt.detail;// this subscribe collect the remaining turn limit from questions.js
     this.renderTurnLimit(turnRemaining); //a function to render the remainging turn limit on screen
   });
@@ -55,8 +55,15 @@ CardsGridView.prototype.createCards = function (card) {
 
 CardsGridView.prototype.createTurnContent = function (turnsRemaining) {
   const turnNumber= document.createElement('h2');
-  turnNumber.textContent = `You have ${turnsRemaining} turn remaining`;
-  console.log(`create turn container`, turnNumber.textContent);
+  if (turnsRemaining > 1){
+    turnNumber.textContent = `You have ${turnsRemaining} turns remaining`;
+  }
+  else if (turnsRemaining === 1){
+    turnNumber.textContent = `You have ${turnsRemaining} turn remaining`;
+  }
+  else {
+    turnNumber.textContent = 'You\'ve run out of turns! You lose!';
+  }
   return turnNumber;
 };
 

@@ -47,7 +47,7 @@ Questions.prototype.getResult = function (questionContent) {
 Questions.prototype.turnLimitdown = function () {
   const remainingTurns = this.turnLimit -= 1 //this lowers the turn limit set up in the class config by 1. we save this in a new variable so we can easily pass it into the publish below.
   console.log('turnlimitdown function, remaing turns', remainingTurns);
-  PubSub.publish('Questions:turns-remainging', remainingTurns);
+  PubSub.publish('Questions:turns-remaining', remainingTurns);
 };
 
 module.exports = Questions;
