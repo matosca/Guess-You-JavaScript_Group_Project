@@ -563,7 +563,7 @@ db.questions.insertMany(
     {
       id: 9,
       question: "Does the character come from the UK?",
-      related_key: "UK",
+      related_key: "uk",
       attribute: "true"
     },
     {
