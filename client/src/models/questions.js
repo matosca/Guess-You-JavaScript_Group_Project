@@ -7,14 +7,12 @@ const Questions = function (url){
   this.request = new RequestHelper(this.url);
   this.allQuestions = null;
   this.characters = null;
-  //this.turnLimit = 10 //setting up storage for the turn limit to be accessed throughout the model. Set this to the total number of cards
 };
 
 Questions.prototype.bindEventsQuestions = function () {
   PubSub.subscribe('SelectView:question-selected', (evt) => {
     this.getResult(evt.detail);
-    //turnLimit -= 1
-    //PubSub.publish('Questions:turn-limit')
+
   });
   PubSub.subscribe('Characters:characters-data-loaded', (evt) => {
     this.characters = evt.detail;
