@@ -17,11 +17,21 @@ Characters.prototype.bindEventsCharacters = function () {
     this.getCharactersToEliminate();
     PubSub.publish('Characters:characters-data-loaded', this.characters);
   });
-  // if and for to check of one card left and if so show game_result_view
 };
 
-Characters.prototype.updateCharacters = function () {
+Characters.prototype.finalCard = function () {
+  let inplayCounter = 0;
+  for (let character of this.characters)  {
+    console.log('character in finalCArd', character);
+    if (character.inplay === 'true'){
+      inplayCounter += 1;
+      console.log('inplay counter', inplayCounter);
+    };
+  };
 
+  if ( inplayCounter === 1 ){
+    PubSub.publish('Characters:guessed-card-result', this.hiddenCharacter);
+  };
 };
 
 Characters.prototype.getData = function () {
@@ -31,19 +41,19 @@ Characters.prototype.getData = function () {
     PubSub.publish('Characters:characters-data-loaded', gameData);
     const hiddenCharacter = this.getHiddenCharacter();
     this.hiddenCharacter = hiddenCharacter;
+    PubSub.publish('Characters:hidden-character-selected', hiddenCharacter);
+    console.log('hidden char', hiddenCharacter);
   })
   .catch( (err) => console.error(err) );
 };
 
 Characters.prototype.getCharactersToEliminate = function () {
-  // const charactersToEliminate = [];
   const characters = this.characters;
   if (this.attribute === this.hiddenCharacter[this.relatedKey]){
     for (let character of characters){
       if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
         character.inplay = "false";
         character.image_url = "../images/monster.png";
-        // charactersToEliminate.push(character);
       };
     };
   }
@@ -52,11 +62,10 @@ Characters.prototype.getCharactersToEliminate = function () {
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";
         character.image_url = "../images/monster.png";
-        // charactersToEliminate.push(character);
       };
     };
   };
-// return charactersToEliminate;
+  this.finalCard();
 };
 
 Characters.prototype.getHiddenCharacter = function() {

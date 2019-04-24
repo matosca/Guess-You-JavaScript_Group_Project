@@ -7,6 +7,10 @@ const GameResultView = require('./views/game_result_view.js');
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  const resultContainer = document.querySelector('#result-container');
+  const gameResultView = new GameResultView(resultContainer);
+  gameResultView.bindEvents();
+  
   const characterGridDiv = document.querySelector('div.character-grid');
   const newCharactersGridView = new CardsGridView(characterGridDiv);
   newCharactersGridView.bindEvents();
@@ -24,5 +28,5 @@ document.addEventListener("DOMContentLoaded", () => {
   const questionsGame = new Questions( `${apiUrl}/questions` );
   questionsGame.bindEventsQuestions();
   questionsGame.getData();
-  
+
 });
