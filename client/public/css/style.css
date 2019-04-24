@@ -90,7 +90,28 @@ body{
   100% { opacity: 0; }
 }
 
-/* PLAY AGAIN LINK */
+/* BUTTONS */
+
+#select-btn {
+  font-family: 'Luckiest Guy';
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 8px 8px 8px 8px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  border-radius: 4px;
+  width: 5%;
+  margin-top: 10px;
+}
+
+#select-btn:hover{
+  background-color: rgb(252,195, 9);
+}
+
 .play {
   display: block;
   font-family: 'Luckiest Guy';
@@ -110,6 +131,25 @@ body{
 
 .play:hover{
   background-color: rgb(252,195, 9);
+}
+
+/* SELECT */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* text-indent: 5px; */
+  text-overflow: ellipsis;
+  color: white;
+  border-radius: 8px;
+  border: 0px;
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 98% 50%;
+  background-color: rgb(252,195, 9);
+  outline: none;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 18px 0 18px 0;
+  /* min-height: 50px; */
+  /* margin: 0.5em 0px; */
 }
 
 img {
