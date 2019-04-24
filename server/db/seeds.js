@@ -18,7 +18,7 @@ db.characters.insertMany(
     {
       name: 'Robert',
       inplay: 'true',
-      image_url: '../images/robert.png',
+      image_url: '../images/rory.png',
       hair_colour: 'brown',
       eye_colour: 'blue',
       gender: 'm',
