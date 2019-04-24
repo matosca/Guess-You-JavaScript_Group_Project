@@ -51,7 +51,7 @@ Characters.prototype.getCharactersToEliminate = function () {
   const characters = this.characters;
   if (this.attribute === this.hiddenCharacter[this.relatedKey]){
     const questionResponse = document.querySelector("#question-response");
-    alert("Yes!");
+    questionResponse.textContent = "YES!";
     for (let character of characters){
       if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
         character.inplay = "false";
@@ -60,7 +60,8 @@ Characters.prototype.getCharactersToEliminate = function () {
     };
   }
   else {
-    alert("No!");
+    const questionResponse = document.querySelector("#question-response");
+    questionResponse.textContent = "NO!";
     for (let character of characters){
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";
