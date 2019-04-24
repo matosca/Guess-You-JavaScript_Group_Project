@@ -19,7 +19,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'true',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Maria',
@@ -37,7 +40,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'true',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Mark King',
@@ -55,7 +61,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'true',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'David',
@@ -73,7 +82,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'true',
-      noise: 'true'
+      noises: 'true',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Pim',
@@ -91,7 +103,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Eric',
@@ -109,7 +124,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Grant',
@@ -127,7 +145,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Alasdair',
@@ -145,7 +166,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'true'
+      noises: 'true',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Emily',
@@ -163,7 +187,10 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'true',
+      smile: 'true'
     },
     {
       name: 'Mark Mackay',
@@ -181,7 +208,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Charlie',
@@ -199,7 +229,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Rory',
@@ -217,7 +250,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Stephen',
@@ -235,7 +271,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Colin',
@@ -250,10 +289,13 @@ db.characters.insertMany(
       vape: 'false',
       nickname: 'false',
       standup: 'true',
-      model: 'false',
+      model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'true',
+      smile: 'false'
     },
     {
       name: 'Lidia',
@@ -271,7 +313,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Pawel',
@@ -286,10 +331,13 @@ db.characters.insertMany(
       vape: 'false',
       nickname: 'false',
       standup: 'true',
-      model: 'false',
+      model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'true'
+      noises: 'true',
+      earring: 'true',
+      employee: 'true',
+      smile: 'false'
     },
     {
       name: 'Ben',
@@ -307,7 +355,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'true',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Jon',
@@ -325,7 +376,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'true',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Jarrod',
@@ -343,7 +397,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'true',
+      employee: 'true',
+      smile: 'false'
     },
     {
       name: 'Rob',
@@ -361,7 +418,10 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Jenn',
@@ -379,7 +439,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Matt',
@@ -397,7 +460,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Annabel',
@@ -415,7 +481,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Juan',
@@ -433,25 +502,31 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'true',
+      smile: 'true'
     },
-     {
-        name: 'Jordan',
-        inplay: 'true',
-        image_url: '../e29_imgages/jordan.png',
-        hair_colour: 'red',
-        gender: 'm',
-        glasses: 'false',
-        facial_hair: 'true',
-        uk: 'false',
-        singer: 'false',
-        vape: 'false',
-        nickname: 'false',
-        standup: 'true',
-        model: 'false',
-        pubquiz: 'false',
-        crumbs: 'false',
-        noise: 'true'
+    {
+      name: 'Jordan',
+      inplay: 'true',
+      image_url: '../e29_imgages/jordan.png',
+      hair_colour: 'red',
+      gender: 'm',
+      glasses: 'false',
+      facial_hair: 'true',
+      uk: 'false',
+      singer: 'false',
+      vape: 'false',
+      nickname: 'false',
+      standup: 'true',
+      model: 'false',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noises: 'true',
+      earring: 'false',
+      employee: 'true',
+      smile: 'true'
     },
     {
       name: 'Kat',
@@ -469,7 +544,10 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Myriam',
@@ -487,7 +565,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'true',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Becky',
@@ -505,7 +586,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     }
   ]
 );
@@ -550,62 +634,62 @@ db.questions.insertMany(
     },
     {
       id: 7,
+      question: "Does your chracter have a big smile?",
+      related_key: "smile",
+      attribute: "true"
+    },
+    {
+      id: 8,
       question: "Is the character wearing glasses?",
       related_key: "glasses",
       attribute: "true"
     },
     {
-      id: 8,
+      id: 9,
+      question: "Does your character have an earring?",
+      related_key: "earring",
+      attribute: "true"
+    },
+    {
+      id: 10,
       question: "Does the character have facial hair?",
       related_key: "facial_hair",
       attribute: "true"
     },
     {
-      id: 9,
-      question: "Does the character come from the UK?",
-      related_key: "UK",
+      id: 11,
+      question: "Does your character work at CodeClan?",
+      related_key: "employee",
       attribute: "true"
     },
     {
-      id: 10,
+      id: 12,
       question: "Is the character a member of crumbsCollaborate?",
       related_key: "crumbs",
       attribute: "true"
     },
     {
-      id: 11,
-      question: "Does the character get into the pubquiz rivalry with e28?",
-      related_key: "pubquiz",
-      attribute: "true"
-    },
-    {
-      id: 12,
-      question: "Does the character have a secret doublelife as a singer?",
-      related_key: "singer",
-      attribute: "true"
-    },
-    {
       id: 13,
-      question: "Does the character have vape between classes?",
-      related_key: "vape",
+      question: "Does the character come from the UK?",
+      related_key: "uk",
       attribute: "true"
     },
     {
       id: 14,
-      question: "Does the character have a class nickname?",
-      related_key: "nickname",
-      attribute: "true"
-    },
-    {
-      id: 15,
       question: "Is the character on time for standup?",
       related_key: "standup",
       attribute: "true"
     },
     {
+      id: 15,
+      question: "Does the character have vape between classes?",
+      related_key: "vape",
+      attribute: "true"
+    },
+    {
       id: 16,
-      question: "Does the character have a model photo?",
-      related_key: "model",
+      question: "Does the character have a class nickname?",
+      related_key: "nickname",
       attribute: "true"
     },
     {
@@ -614,6 +698,23 @@ db.questions.insertMany(
       related_key: "noises",
       attribute: "true"
     },
-    //strange noises, earrings, code clan employee, smiley?
+    {
+      id: 18,
+      question: "Does the character get into the pubquiz rivalry with e28?",
+      related_key: "pubquiz",
+      attribute: "true"
+    },
+    {
+      id: 19,
+      question: "Does the character have a model photo?",
+      related_key: "model",
+      attribute: "true"
+    },
+    {
+      id: 20,
+      question: "Does the character have a secret doublelife as a singer?",
+      related_key: "singer",
+      attribute: "true"
+    }
   ]
 );

@@ -11,7 +11,7 @@
 </head>
 <body>
   <header id="game-heading">
-    <h1>Guess Youu?</h1>
+    <h1>Guess You?</h1>
     <div id= "turnRemaining">
       <h2> You have 10 turns remaining </h2>
     </div>
@@ -23,12 +23,12 @@
 
       <form class="select-form">
         <label for="questions">Choose a question</label>
+        <span class="custom-dropdown">
         <select id="questions" name="questions">
           <option disabled select></option>
         </select>
-        <input type="submit" name="submit" value="Ask">
+        <input id="select-btn" type="submit" name="submit" value="Ask">
       </form>
-
       <p id="question-response" class="blink"></p>
 
     </div>

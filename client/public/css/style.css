@@ -28,7 +28,7 @@ body{
   display: grid; /* This displays the class in a grid */
   grid-template-columns: 1fr 1fr 1fr 1fr; /* Splitting the grid into 5 columns of 1 fraction */
   grid-gap: 5px; /* This acts as a margin between the cards */
-  margin: 30px; /* this covers all margins*/
+  /* margin: 30px; /* this covers all margins*/ */
   text-align: center;
   background-color: #ffffff; /* This moves our menu to the centre of the page */
   border-radius: 1em; /* Rounds the corners of the border */
@@ -42,6 +42,15 @@ body{
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   color: #f0e8e8;
+}
+select#questions{
+  padding-left: 0.5em;
+}
+/* .card img{
+  height: auto;
+  width: 200px;
+  height: 250px;
+  /* Whatever the width is set to, the height will match to make sure the dimensions are not out of sync.  This can be applied the other way around
 }
 
 /* BLINKING TEXT */
@@ -84,7 +93,28 @@ body{
   100% { opacity: 0; }
 }
 
-/* PLAY AGAIN LINK */
+/* BUTTONS */
+
+#select-btn {
+  font-family: 'Luckiest Guy';
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 8px 8px 8px 8px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  border-radius: 4px;
+  width: 5%;
+  margin-top: 10px;
+}
+
+#select-btn:hover{
+  background-color: rgb(252,195, 9);
+}
+
 .play {
   display: block;
   font-family: 'Luckiest Guy';
@@ -104,6 +134,25 @@ body{
 
 .play:hover{
   background-color: rgb(252,195, 9);
+}
+
+/* SELECT */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* text-indent: 5px; */
+  text-overflow: ellipsis;
+  color: white;
+  border-radius: 8px;
+  border: 0px;
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 98% 50%;
+  background-color: rgb(252,195, 9);
+  outline: none;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 18px 0 18px 0;
+  /* min-height: 50px; */
+  /* margin: 0.5em 0px; */
 }
 
 img {
