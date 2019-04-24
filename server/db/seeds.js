@@ -495,6 +495,6 @@ db.questions.insertMany(
       related_key: "model",
       attribute: "true"
     }
-    strange noises, earrings, code clan employee, smiley?
+    //strange noises, earrings, code clan employee, smiley?
   ]
 );
