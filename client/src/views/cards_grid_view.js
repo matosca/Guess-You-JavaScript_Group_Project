@@ -62,7 +62,7 @@ CardsGridView.prototype.createTurnContent = function (turnsRemaining) {
     turnNumber.textContent = `You have ${turnsRemaining} turn remaining`;
   }
   else {
-    turnNumber.textContent = 'You\'ve run out of turns! You lose!';
+    PubSub.publish('CardsGridView:no-turns_left', turnsRemaining);
   }
   return turnNumber;
 };

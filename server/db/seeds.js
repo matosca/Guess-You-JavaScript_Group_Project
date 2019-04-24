@@ -6,7 +6,7 @@ db.characters.insertMany(
     {
       name: 'Amy',
       inplay: 'true',
-      image_url: '../images/amy.jpg',
+      image_url: '../e29_imgages/amy.png',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -19,12 +19,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'true',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Maria',
       inplay: 'true',
-      image_url: '../images/maria.jpg',
+      image_url: '../e29_imgages/maria.png',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -37,12 +40,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'true',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Mark King',
       inplay: 'true',
-      image_url: '../images/markk.jpg',
+      image_url: '../e29_imgages/markk.png',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'true',
@@ -55,12 +61,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'true',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'David',
       inplay: 'true',
-      image_url: '../images/david.jpg',
+      image_url: '../e29_imgages/david.png',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -73,12 +82,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'true',
-      noise: 'true'
+      noises: 'true',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Pim',
       inplay: 'true',
-      image_url: '../images/pim.jpg',
+      image_url: '../e29_imgages/pim.png',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -91,12 +103,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Eric',
       inplay: 'true',
-      image_url: '../images/eric.jpg',
+      image_url: '../e29_imgages/eric.png',
       hair_colour: 'blonde',
       gender: 'm',
       glasses: 'false',
@@ -109,12 +124,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Grant',
       inplay: 'true',
-      image_url: '../images/grant.jpg',
+      image_url: '../e29_imgages/grant.png',
       hair_colour: 'red',
       gender: 'm',
       glasses: 'false',
@@ -127,12 +145,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Alasdair',
       inplay: 'true',
-      image_url: '../images/alasdair.jpg',
+      image_url: '../e29_imgages/alasdair.png',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -145,12 +166,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'true'
+      noises: 'true',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Emily',
       inplay: 'true',
-      image_url: '../images/emily.jpg',
+      image_url: '../e29_imgages/emily.png',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -163,12 +187,15 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'true',
+      smile: 'true'
     },
     {
       name: 'Mark Mackay',
       inplay: 'true',
-      image_url: '../images/markm.jpg',
+      image_url: '../e29_imgages/markm.png',
       hair_colour: 'shaved',
       gender: 'm',
       glasses: 'false',
@@ -181,12 +208,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Charlie',
       inplay: 'true',
-      image_url: '../images/charlie.jpg',
+      image_url: '../e29_imgages/charlie.png',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -199,12 +229,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Rory',
       inplay: 'true',
-      image_url: '../images/rory.jpg',
+      image_url: '../e29_imgages/rory.png',
       hair_colour: 'shaved',
       gender: 'm',
       glasses: 'false',
@@ -217,12 +250,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Stephen',
       inplay: 'true',
-      image_url: '../images/stephen.jpg',
+      image_url: '../e29_imgages/stephen.png',
       hair_colour: 'shaved',
       gender: 'm',
       glasses: 'false',
@@ -235,35 +271,83 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
+    },
+    {
+      name: 'Colin',
+      inplay: 'true',
+      image_url: '../e29_imgages/colin.png',
+      hair_colour: 'brunette',
+      gender: 'm',
+      glasses: 'true',
+      facial_hair: 'false',
+      uk: 'true',
+      singer: 'false',
+      vape: 'false',
+      nickname: 'false',
+      standup: 'true',
+      model: 'true',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noises: 'false',
+      earring: 'false',
+      employee: 'true',
+      smile: 'false'
     },
     {
       name: 'Lidia',
       inplay: 'true',
-      image_url: '../images/lidia.jpg',
+      image_url: '../e29_imgages/lidia.png',
       hair_colour: 'red',
       gender: 'f',
       glasses: 'false',
       facial_hair: 'false',
-      uk: 'true',
+      uk: 'false',
       singer: 'false',
       vape: 'false',
       nickname: 'false',
-      standup: 'false',
+      standup: 'true',
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
+    },
+    {
+      name: 'Pawel',
+      inplay: 'true',
+      image_url: '../e29_imgages/pawel.png',
+      hair_colour: 'red',
+      gender: 'm',
+      glasses: 'false',
+      facial_hair: 'true',
+      uk: 'false',
+      singer: 'false',
+      vape: 'false',
+      nickname: 'false',
+      standup: 'true',
+      model: 'true',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noises: 'true',
+      earring: 'true',
+      employee: 'true',
+      smile: 'false'
     },
     {
       name: 'Ben',
       inplay: 'true',
-      image_url: '../images/ben.jpg',
+      image_url: '../e29_imgages/ben.png',
       hair_colour: 'red',
       gender: 'm',
       glasses: 'false',
       facial_hair: 'false',
-      uk: 'true',
+      uk: 'false',
       singer: 'false',
       vape: 'true',
       nickname: 'false',
@@ -271,12 +355,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'true',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Jon',
       inplay: 'true',
-      image_url: '../images/jon.jpg',
+      image_url: '../e29_imgages/jon.png',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -289,12 +376,36 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'true',
+      employee: 'false',
+      smile: 'false'
+    },
+    {
+      name: 'Jarrod',
+      inplay: 'true',
+      image_url: '../e29_imgages/jarrod.png',
+      hair_colour: 'red',
+      gender: 'm',
+      glasses: 'false',
+      facial_hair: 'false',
+      uk: 'true',
+      singer: 'false',
+      vape: 'true',
+      nickname: 'false',
+      standup: 'true',
+      model: 'false',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noises: 'false',
+      earring: 'true',
+      employee: 'true',
+      smile: 'false'
     },
     {
       name: 'Rob',
       inplay: 'true',
-      image_url: '../images/rob.jpg',
+      image_url: '../e29_imgages/rob.png',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'false',
@@ -307,12 +418,15 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Jenn',
       inplay: 'true',
-      image_url: '../images/jen.jpg',
+      image_url: '../e29_imgages/jenn.png',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -325,12 +439,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Matt',
       inplay: 'true',
-      image_url: '../images/matt.jpg',
+      image_url: '../e29_imgages/matt.png',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'true',
@@ -343,12 +460,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Annabel',
       inplay: 'true',
-      image_url: '../images/annabel.jpg',
+      image_url: '../e29_imgages/annabel.png',
       hair_colour: 'red',
       gender: 'f',
       glasses: 'false',
@@ -361,12 +481,57 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'false'
+    },
+    {
+      name: 'Juan',
+      inplay: 'true',
+      image_url: '../e29_imgages/juan.png',
+      hair_colour: 'brunette',
+      gender: 'm',
+      glasses: 'true',
+      facial_hair: 'false',
+      uk: 'false',
+      singer: 'false',
+      vape: 'false',
+      nickname: 'false',
+      standup: 'true',
+      model: 'false',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noises: 'false',
+      earring: 'false',
+      employee: 'true',
+      smile: 'true'
+    },
+    {
+      name: 'Jordan',
+      inplay: 'true',
+      image_url: '../e29_imgages/jordan.png',
+      hair_colour: 'red',
+      gender: 'm',
+      glasses: 'false',
+      facial_hair: 'true',
+      uk: 'false',
+      singer: 'false',
+      vape: 'false',
+      nickname: 'false',
+      standup: 'true',
+      model: 'false',
+      pubquiz: 'false',
+      crumbs: 'false',
+      noises: 'true',
+      earring: 'false',
+      employee: 'true',
+      smile: 'true'
     },
     {
       name: 'Kat',
       inplay: 'true',
-      image_url: '../images/kat.jpg',
+      image_url: '../e29_imgages/kat.png',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
@@ -379,12 +544,15 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     },
     {
       name: 'Myriam',
       inplay: 'true',
-      image_url: '../images/myriam.jpg',
+      image_url: '../e29_imgages/myriam.png',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'true',
@@ -397,12 +565,15 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'true',
+      employee: 'false',
+      smile: 'false'
     },
     {
       name: 'Becky',
       inplay: 'true',
-      image_url: '../images/becky.jpg',
+      image_url: '../e29_imgages/becky.png',
       hair_colour: 'blonde',
       gender: 'f',
       glasses: 'false',
@@ -415,7 +586,10 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false'
+      noises: 'false',
+      earring: 'false',
+      employee: 'false',
+      smile: 'true'
     }
   ]
 );
@@ -438,7 +612,7 @@ db.questions.insertMany(
       id: 3,
       question: "Does the character have brunette hair?",
       related_key: "hair_colour",
-      attribute: "brown"
+      attribute: "brunette"
     },
     {
       id: 4,
@@ -460,62 +634,62 @@ db.questions.insertMany(
     },
     {
       id: 7,
+      question: "Does your chracter have a big smile?",
+      related_key: "smile",
+      attribute: "true"
+    },
+    {
+      id: 8,
       question: "Is the character wearing glasses?",
       related_key: "glasses",
       attribute: "true"
     },
     {
-      id: 8,
+      id: 9,
+      question: "Does your character have an earring?",
+      related_key: "earring",
+      attribute: "true"
+    },
+    {
+      id: 10,
       question: "Does the character have facial hair?",
       related_key: "facial_hair",
       attribute: "true"
     },
     {
-      id: 9,
-      question: "Does the character come from the UK?",
-      related_key: "UK",
+      id: 11,
+      question: "Does your character work at CodeClan?",
+      related_key: "employee",
       attribute: "true"
     },
     {
-      id: 10,
+      id: 12,
       question: "Is the character a member of crumbsCollaborate?",
       related_key: "crumbs",
       attribute: "true"
     },
     {
-      id: 11,
-      question: "Does the character get into the pubquiz rivalry with e28?",
-      related_key: "pubquiz",
-      attribute: "true"
-    },
-    {
-      id: 12,
-      question: "Does the character have a secret doublelife as a singer?",
-      related_key: "singer",
-      attribute: "true"
-    },
-    {
       id: 13,
-      question: "Does the character have vape between classes?",
-      related_key: "vape",
+      question: "Does the character come from the UK?",
+      related_key: "uk",
       attribute: "true"
     },
     {
       id: 14,
-      question: "Does the character have a class nickname?",
-      related_key: "nickname",
-      attribute: "true"
-    },
-    {
-      id: 15,
       question: "Is the character on time for standup?",
       related_key: "standup",
       attribute: "true"
     },
     {
+      id: 15,
+      question: "Does the character have vape between classes?",
+      related_key: "vape",
+      attribute: "true"
+    },
+    {
       id: 16,
-      question: "Does the character have a model photo?",
-      related_key: "model",
+      question: "Does the character have a class nickname?",
+      related_key: "nickname",
       attribute: "true"
     },
     {
@@ -524,6 +698,23 @@ db.questions.insertMany(
       related_key: "noises",
       attribute: "true"
     },
-    //strange noises, earrings, code clan employee, smiley?
+    {
+      id: 18,
+      question: "Does the character get into the pubquiz rivalry with e28?",
+      related_key: "pubquiz",
+      attribute: "true"
+    },
+    {
+      id: 19,
+      question: "Does the character have a model photo?",
+      related_key: "model",
+      attribute: "true"
+    },
+    {
+      id: 20,
+      question: "Does the character have a secret doublelife as a singer?",
+      related_key: "singer",
+      attribute: "true"
+    }
   ]
 );
