@@ -17,6 +17,12 @@ GameResultView.prototype.bindEvents = function () {
   PubSub.subscribe('Characters:hidden-character-selected', (evt) => {
     this.hiddenCharacter = evt.detail;
   });
+  PubSub.subscribe('CardsGridView:no-turns_left', (evt) => {
+    const gameContainer = document.querySelector('#game-container');
+    gameContainer.innerHTML = "";
+    const noTurnsRemaining = evt.detail;
+    this.outOfTurns(noTurnsRemaining)
+  });
 };
 
 GameResultView.prototype.renderResult = function (guessedCard) {
@@ -60,6 +66,21 @@ GameResultView.prototype.createElement = function (elementType, text) {
   const element = document.createElement(elementType);
   element.textContent = text;
   return element;
+};
+
+GameResultView.prototype.outOfTurns = function () {
+  const resultMessage = this.createElement('h2', `You're Out of Turns. It was ${this.hiddenCharacter.name}. Get it Together!`);
+  this.container.appendChild(resultMessage);
+
+  const hiddenCharacter = document.createElement('img');
+  hiddenCharacter.src = this.hiddenCharacter.image_url;
+  this.container.appendChild(hiddenCharacter);
+
+  const playAgainButton = document.createElement('a');
+  playAgainButton.setAttribute("href", "http://localhost:3000");
+  playAgainButton.innerHTML = "PLAY AGAIN!";
+  playAgainButton.classList.add("play");
+  this.container.appendChild(playAgainButton);
 };
 
 module.exports = GameResultView;
