@@ -74,9 +74,8 @@ function CustomAlert(){
 Characters.prototype.getCharactersToEliminate = function () {
   const characters = this.characters;
   if (this.attribute === this.hiddenCharacter[this.relatedKey]){
-    // const Alert = new CustomAlert();
-    // Alert.render(`Yes! The hidden character does have ${this.relatedKey} ${this.attribute}.`)
-    alert(`Yes! The hidden character does have ${this.relatedKey} ${this.attribute}.`);
+    const Alert = new CustomAlert();
+    Alert.render("Yes!");
     for (let character of characters){
       if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
         character.inplay = "false";
@@ -85,9 +84,8 @@ Characters.prototype.getCharactersToEliminate = function () {
     };
   }
   else {
-    // const Alert = new CustomAlert();
-    // Alert.render(`No! The hidden character does not have ${this.relatedKey} ${this.attribute}.`);
-    alert(`No! The hidden character does not have ${this.relatedKey} ${this.attribute}.`);
+    const Alert = new CustomAlert();
+    Alert.render("No!");
     for (let character of characters){
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";
