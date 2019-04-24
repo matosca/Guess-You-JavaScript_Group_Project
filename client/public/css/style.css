@@ -26,9 +26,9 @@ body{
 
 .character-grid {
   display: grid; /* This displays the class in a grid */
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* Splitting the grid into 5 columns of 1 fraction */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Splitting the grid into 5 columns of 1 fraction */
   grid-gap: 5px; /* This acts as a margin between the cards */
-  margin: 30px; /* this covers all margins*/
+  /* margin: 30px; /* this covers all margins*/ */
   text-align: center;
   background-color: #ffffff; /* This moves our menu to the centre of the page */
   border-radius: 1em; /* Rounds the corners of the border */
@@ -43,6 +43,12 @@ body{
   font-weight: bold;
   color: #f0e8e8;
 }
+/* .card img{
+  height: auto;
+  width: 200px;
+  height: 250px;
+  /* Whatever the width is set to, the height will match to make sure the dimensions are not out of sync.  This can be applied the other way around */
+} */
 
 /* BLINKING TEXT */
 .blink {
@@ -84,7 +90,28 @@ body{
   100% { opacity: 0; }
 }
 
-/* PLAY AGAIN LINK */
+/* BUTTONS */
+
+#select-btn {
+  font-family: 'Luckiest Guy';
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 6px 8px 6px 8px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  border-radius: 4px;
+  width: 6%;
+  margin-top: 10px;
+}
+
+#select-btn:hover{
+  background-color: rgb(252,195, 9);
+}
+
 .play {
   display: block;
   font-family: 'Luckiest Guy';
@@ -104,69 +131,6 @@ body{
 
 .play:hover{
   background-color: rgb(252,195, 9);
-}
-
-/* SELECT */
-.custom-dropdown {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 10px; /* demo only */
-}
-
-.custom-dropdown select {
-  background-color: rgb(252,195, 9);
-  color: #fff;
-  font-size: inherit;
-  padding: .5em;
-  padding-right: 2.5em;
-  border: 0;
-  margin: 0;
-  border-radius: 3px;
-  text-indent: 0.01px;
-  text-overflow: '';
-  -webkit-appearance: button; /* hide default arrow in chrome OSX */
-}
-
-.custom-dropdown::before,
-.custom-dropdown::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-
-.custom-dropdown::after { /*  Custom dropdown arrow */
-  content: "\25BC";
-  height: 1em;
-  font-size: .625em;
-  line-height: 1;
-  right: 1.2em;
-  top: 50%;
-  margin-top: -.5em;
-}
-
-.custom-dropdown::before { /*  Custom dropdown arrow cover */
-  width: 2em;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 0 3px 3px 0;
-}
-
-.custom-dropdown select[disabled] {
-  color: rgba(0,0,0,.3);
-}
-
-.custom-dropdown select[disabled]::after {
-  color: rgba(0,0,0,.1);
-}
-
-.custom-dropdown::before {
-  background-color: rgba(0,0,0,.15);
-}
-
-.custom-dropdown::after {
-  color: rgba(0,0,0,.4);
 }
 
 img {
