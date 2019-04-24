@@ -210,7 +210,7 @@ db.characters.insertMany(
     {
       name: 'Joe',
       inplay: 'true',
-      image_url: '../images/joe.png',
+      image_url: '../images/jon2.png',
       hair_colour: 'blonde',
       eye_colour: 'brown',
       gender: 'm',
