@@ -384,7 +384,7 @@ db.characters.insertMany(
     {
       name: 'Matt',
       inplay: 'true',
-      image_url: '.../e29_imgages/matt.png',
+      image_url: '../e29_imgages/matt.png',
       hair_colour: 'brunette',
       gender: 'm',
       glasses: 'true',

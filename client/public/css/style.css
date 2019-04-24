@@ -139,6 +139,28 @@ color: #f0e8e8;
 }
 
 /* PLAY AGAIN LINK */
-.play {
-  colour: white;
+.play a {
+  font-family: sans-serif;
+  position: relative;
+  background-color: rgb(109, 0, 202);
+  color: rgb(252,195, 9);
+  font-size: 2em;
+  top: 15em;
+  left: 12.8em;
+  border: 1px solid rgb(252,195, 9);
+  border-radius: 6px;
+  -webkit-box-shadow: 3px 2px 12px -1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 3px 2px 12px -1px rgba(0,0,0,0.5);
+  box-shadow: 3px 2px 12px -1px rgba(0,0,0,0.5);
+  padding: 10px 25px;
+  text-decoration: none;
+  -webkit-box-shadow: inset 3px 2px 12px -1px rgba(0,0,0,0.4);
+  -moz-box-shadow: inset 3px 2px 12px -1px rgba(0,0,0,0.4);
+  box-shadow: inset 3px 2px 12px -1px rgba(0,0,0,0.4);
+}
+
+.play a:hover {
+  background-color: rgb(252,195, 9);
+  color: rgb(109, 0, 202);
+  border: 1px solid rgb(109, 0, 202);
 }
