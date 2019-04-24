@@ -9,6 +9,10 @@ GameResultView.prototype.bindEvents = function () {
     const resultedCard = evt.detail;
     this.renderResult(resultedCard);
   });
+  //PubSub.subscribe('Questions:turn-limit', (evt) => {
+    //const turnLimit = evt.detail;
+    //this.renderTurnLimit
+  //});
 };
 
 GameResultView.prototype.renderResult = function (guessedCard) {
