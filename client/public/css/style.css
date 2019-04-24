@@ -95,6 +95,7 @@ color: #f0e8e8;
 
 /* PLAY AGAIN LINK */
 .play {
+  display: block;
   color: #f0e8e8;
 }
 
