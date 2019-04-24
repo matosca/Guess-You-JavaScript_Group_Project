@@ -18,7 +18,8 @@ db.characters.insertMany(
       standup: 'false',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'true'
+      crumbs: 'true',
+      noise: 'false'
     },
     {
       name: 'Maria',
@@ -35,7 +36,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'false',
-      crumbs: 'true'
+      crumbs: 'true',
+      noise: 'false'
     },
     {
       name: 'Mark King',
@@ -52,7 +54,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'false',
-      crumbs: 'true'
+      crumbs: 'true',
+      noise: 'false'
     },
     {
       name: 'David',
@@ -69,7 +72,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'true'
+      crumbs: 'true',
+      noise: 'true'
     },
     {
       name: 'Pim',
@@ -86,7 +90,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Eric',
@@ -103,7 +108,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Grant',
@@ -120,7 +126,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Alasdair',
@@ -137,7 +144,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'true'
     },
     {
       name: 'Emily',
@@ -154,7 +162,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'true',
       pubquiz: 'false',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Mark Mackay',
@@ -171,7 +180,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'false',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Charlie',
@@ -188,7 +198,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Rory',
@@ -205,7 +216,8 @@ db.characters.insertMany(
       standup: 'false',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Stephen',
@@ -222,7 +234,8 @@ db.characters.insertMany(
       standup: 'false',
       model: 'false',
       pubquiz: 'false',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Lidia',
@@ -239,7 +252,8 @@ db.characters.insertMany(
       standup: 'false',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Ben',
@@ -256,7 +270,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Jon',
@@ -273,7 +288,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Rob',
@@ -290,7 +306,8 @@ db.characters.insertMany(
       standup: 'false',
       model: 'true',
       pubquiz: 'false',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Jenn',
@@ -307,7 +324,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Matt',
@@ -324,7 +342,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'false',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Annabel',
@@ -341,7 +360,8 @@ db.characters.insertMany(
       standup: 'false',
       model: 'false',
       pubquiz: 'false',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Kat',
@@ -358,7 +378,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'true',
       pubquiz: 'false',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Myriam',
@@ -375,7 +396,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'true',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     },
     {
       name: 'Becky',
@@ -392,7 +414,8 @@ db.characters.insertMany(
       standup: 'true',
       model: 'false',
       pubquiz: 'false',
-      crumbs: 'false'
+      crumbs: 'false',
+      noise: 'false'
     }
   ]
 );
@@ -494,7 +517,13 @@ db.questions.insertMany(
       question: "Does the character have a model photo?",
       related_key: "model",
       attribute: "true"
-    }
+    },
+    {
+      id: 17,
+      question: "Does your character express themselves in strange noises?",
+      related_key: "noises",
+      attribute: "true"
+    },
     //strange noises, earrings, code clan employee, smiley?
   ]
 );
