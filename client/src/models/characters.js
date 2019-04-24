@@ -22,10 +22,8 @@ Characters.prototype.bindEventsCharacters = function () {
 Characters.prototype.finalCard = function () {
   let inplayCounter = 0;
   for (let character of this.characters)  {
-    console.log('character in finalCArd', character);
     if (character.inplay === 'true'){
       inplayCounter += 1;
-      console.log('inplay counter', inplayCounter);
     };
   };
 
@@ -50,7 +48,8 @@ Characters.prototype.getData = function () {
 Characters.prototype.getCharactersToEliminate = function () {
   const characters = this.characters;
   if (this.attribute === this.hiddenCharacter[this.relatedKey]){
-    alert("Yes!");
+    const questionResponse = document.querySelector("#question-response");
+    questionResponse.textContent = "YES!";
     for (let character of characters){
       if (character[this.relatedKey] !== this.hiddenCharacter[this.relatedKey]){
         character.inplay = "false";
@@ -59,7 +58,8 @@ Characters.prototype.getCharactersToEliminate = function () {
     };
   }
   else {
-    alert("No!");
+    const questionResponse = document.querySelector("#question-response");
+    questionResponse.textContent = "NO!";
     for (let character of characters){
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";

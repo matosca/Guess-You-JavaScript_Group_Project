@@ -32,6 +32,12 @@ GameResultView.prototype.renderResult = function (guessedCard) {
     resultBox.appendChild(resultCharacter);
 
     this.container.appendChild(resultBox);
+
+    const playAgainButton = document.createElement('a');
+    playAgainButton.setAttribute("href", "http://localhost:3000");
+    playAgainButton.innerHTML = "PLAY AGAIN!";
+    playAgainButton.classList.add("play");
+    this.container.appendChild(playAgainButton);
   }
   else {
     const resultMessage = this.createElement('h2', `${guessedCard.name} is wrong! It was ${this.hiddenCharacter.name}. You lose!`);
@@ -40,6 +46,12 @@ GameResultView.prototype.renderResult = function (guessedCard) {
     const hiddenCharacter = document.createElement('img');
     hiddenCharacter.src = this.hiddenCharacter.image_url;
     this.container.appendChild(hiddenCharacter);
+
+    const playAgainButton = document.createElement('a');
+    playAgainButton.setAttribute("href", "http://localhost:3000");
+    playAgainButton.innerHTML = "PLAY AGAIN!";
+    playAgainButton.classList.add("play");
+    this.container.appendChild(playAgainButton);
   };
 
 };
