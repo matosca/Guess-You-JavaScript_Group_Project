@@ -12,6 +12,7 @@ const Questions = function (url){
 Questions.prototype.bindEventsQuestions = function () {
   PubSub.subscribe('SelectView:question-selected', (evt) => {
     this.getResult(evt.detail);
+
   });
   PubSub.subscribe('Characters:characters-data-loaded', (evt) => {
     this.characters = evt.detail;
