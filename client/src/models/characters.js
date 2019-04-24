@@ -63,7 +63,7 @@ Characters.prototype.getCharactersToEliminate = function () {
     for (let character of characters){
       if (character[this.relatedKey] === this.attribute){
         character.inplay = "false";
-        character.image_url = "../images/monster.png";
+        character.image_url = "../e29_imgages/monster.png";
       };
     };
   };
