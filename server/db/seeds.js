@@ -19,7 +19,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'true',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -40,7 +40,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'true',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -61,7 +61,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'true',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -82,7 +82,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'true',
-      noise: 'true',
+      noises: 'true',
       earring: 'false',
       employee: 'false',
       smile: 'true'
@@ -103,7 +103,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'true'
@@ -124,7 +124,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -145,7 +145,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -166,7 +166,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'true',
+      noises: 'true',
       earring: 'false',
       employee: 'false',
       smile: 'true'
@@ -187,7 +187,7 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'true',
       smile: 'true'
@@ -208,7 +208,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'true'
@@ -229,7 +229,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -250,7 +250,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -271,7 +271,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -292,7 +292,7 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'true',
       smile: 'false'
@@ -313,7 +313,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -334,7 +334,7 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'true',
+      noises: 'true',
       earring: 'true',
       employee: 'true',
       smile: 'false'
@@ -355,7 +355,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'true',
       employee: 'false',
       smile: 'false'
@@ -376,7 +376,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'true',
       employee: 'false',
       smile: 'false'
@@ -397,7 +397,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'true',
       employee: 'true',
       smile: 'false'
@@ -418,7 +418,7 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'true'
@@ -439,7 +439,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'true'
@@ -460,7 +460,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -481,7 +481,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'false'
@@ -502,7 +502,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'true',
       smile: 'true'
@@ -523,7 +523,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'true',
+      noises: 'true',
       earring: 'false',
       employee: 'true',
       smile: 'true'
@@ -544,7 +544,7 @@ db.characters.insertMany(
       model: 'true',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'true'
@@ -565,7 +565,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'true',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'true',
       employee: 'false',
       smile: 'false'
@@ -586,7 +586,7 @@ db.characters.insertMany(
       model: 'false',
       pubquiz: 'false',
       crumbs: 'false',
-      noise: 'false',
+      noises: 'false',
       earring: 'false',
       employee: 'false',
       smile: 'true'
