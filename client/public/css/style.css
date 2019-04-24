@@ -25,9 +25,9 @@ color: #f0e8e8;
 
 .character-grid {
   display: grid; /* This displays the class in a grid */
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Splitting the grid into 5 columns of 1 fraction */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Splitting the grid into 5 columns of 1 fraction */
   grid-gap: 5px; /* This acts as a margin between the cards */
-  /* margin: 30px; /* this covers all margins*/ */
+  margin: 30px; /* this covers all margins*/
   text-align: center;
   background-color: #ffffff; /* This moves our menu to the centre of the page */
   border-radius: 1em; /* Rounds the corners of the border */
@@ -42,12 +42,7 @@ color: #f0e8e8;
   font-weight: bold;
   color: #f0e8e8;
 }
-/* .card img{
-  height: auto;
-  width: 200px;
-  height: 250px;
-  /* Whatever the width is set to, the height will match to make sure the dimensions are not out of sync.  This can be applied the other way around */
-} */
+
 
 /* BLINKING TEXT */
 .blink {
