@@ -41,6 +41,7 @@ Questions.prototype.getResult = function (questionContent) {
     attribute: selectedQuestion.attribute
   }
   PubSub.publish('Questions:get-results-send-question-information', questionInfo);
+};
 
 Questions.prototype.turnLimitdown = function () {
   const remainingTurns = this.turnLimit -= 1 //this lowers the turn limit set up in the class config by 1. we save this in a new variable so we can easily pass it into the publish below.

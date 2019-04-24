@@ -29,9 +29,12 @@ CardsGridView.prototype.render = function (charactersData) {
 };
 
 CardsGridView.prototype.renderTurnLimit = function(turnsRemaining) {
-  this.turnContainer.innerHTML = "";
-  const turnContainer = this.createTurnContainer(turnsRemaining)
-  this.container.appendChild(turnContainer)
+  console.log('renderTurnLimit-turns remaining', turnsRemaining);
+  const header = document.querySelector("#turnRemaining");
+  header.innerHTML = "";
+  const turnContainer = this.createTurnContent(turnsRemaining);
+  console.log('render turn limit- turn container', turnContainer);
+  header.appendChild(turnContainer);
 }
 
 CardsGridView.prototype.createCards = function (card) {
@@ -50,13 +53,11 @@ CardsGridView.prototype.createCards = function (card) {
   return cardContainer;
 };
 
-CardsGridView.prototype.createTurnContainer = function (turnsRemaining) {
-  const turnContainer = document.createElement('div');
-  turnContainer.classList.add('turnRemaining');
+CardsGridView.prototype.createTurnContent = function (turnsRemaining) {
   const turnNumber= document.createElement('h2');
-  turnNumber.textContent = `You have ${turnRemaining} turn remaining`
-  turnContainer.appendChild(turnNumber)
-  return turnContainer
+  turnNumber.textContent = `You have ${turnsRemaining} turn remaining`;
+  console.log(`create turn container`, turnNumber.textContent);
+  return turnNumber;
 };
 
 module.exports = CardsGridView;
