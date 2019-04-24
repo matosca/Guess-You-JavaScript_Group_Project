@@ -22,10 +22,8 @@ Characters.prototype.bindEventsCharacters = function () {
 Characters.prototype.finalCard = function () {
   let inplayCounter = 0;
   for (let character of this.characters)  {
-    console.log('character in finalCArd', character);
     if (character.inplay === 'true'){
       inplayCounter += 1;
-      console.log('inplay counter', inplayCounter);
     };
   };
 
