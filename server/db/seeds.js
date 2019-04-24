@@ -366,7 +366,7 @@ db.characters.insertMany(
     {
       name: 'Kat',
       inplay: 'true',
-      image_url: '',
+      image_url: '../images/kat.jpg',
       hair_colour: 'brunette',
       gender: 'f',
       glasses: 'false',
