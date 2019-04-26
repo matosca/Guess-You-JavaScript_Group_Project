@@ -1,4 +1,4 @@
-# Guess Who?
+# Guess You?
 
 This is a full-stack JavaScript web application game based on the boardgame 'Guess Who?'. 
 
@@ -15,13 +15,17 @@ A user should be able to:
 A user should be able to:
 
 * Have a turn time limit.
+* Provide with some feedback after each selected question.
 * View animation when card is out of play.
-* View score board of previous games.
+* Remove questions from the select dropdown after they have been asked.
+
 
 ## Advanced Extensions
 
 The app should be:
 
+* View score board of previous games.
+* Have an option to select levels of difficulty.
 * A multiplayer game.
 
 ## Getting Started
@@ -70,7 +74,7 @@ Fourth, install MongoDB is an open-source, non-relational database. It was desig
 npm install mongodb
 ```
 
-### Running
+### Running
 
 In order to make the app running, there are required to add some "scripts".
 
