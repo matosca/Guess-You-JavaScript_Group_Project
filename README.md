@@ -1,12 +1,14 @@
 # Guess You?
 
-This is a full-stack JavaScript web application game based on the boardgames 'Guess Who?' but instead it has been themed to be CodeClan instructors and E29 students 'Guess You?'.
-
 ![Guess You? - Welcome Page](images/guess_you_welcome.png)
+
+This is a full-stack JavaScript web application game based on the boardgames 'Guess Who?' but instead it has been themed to be CodeClan instructors and E29 students 'Guess You?'.
 
 ##### Built With
 
 The app was built with JavaScript as the main programming language, MongoDB and Express using PubSub pattern. 
+
+![Guess You? - Main View](images/guess_you_running_game.png)
 
 ## MVP
 
@@ -95,6 +97,30 @@ This is for making the bundle.js in a watch mode.
 "server:dev": "nodemon server/server.js"
 ```
 
-This other one runs our server with Nodemon, so that it watches the file for changes and restarts the server as appropriate.
+This other one runs our server with Nodemon, so that it watches the file for changes and restarts the server as appropriate. In order to make it run, these are the commands you need to follow:
+
+```
+npm install
+
+mongod
+```
+In a new tab, copy and paste the following to seed the database.
+
+```
+mongo < server/db/seeds.js
+```
+
+In a new tab, copy and paste the following to start running the bundler webpack watch mode
+
+```
+npm run build
+```
+
+And, finally, in a new tab, copy and paste the following to start running the server in the port <http://localhost:3000>
+
+```
+npm run server:dev
+```
+
 
 
