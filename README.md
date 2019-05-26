@@ -1,6 +1,12 @@
 # Guess You?
 
-This is a full-stack JavaScript web application game based on the boardgame 'Guess Who?'. 
+This is a full-stack JavaScript web application game based on the boardgames 'Guess Who?' but instead it has been themed to be CodeClan instructors and E29 students 'Guess You?'.
+
+![Guess You? - Welcome Page](images/guess_you_welcome.png)
+
+##### Built With
+
+The app was built with JavaScript as the main programming language, MongoDB and Express using PubSub pattern. 
 
 ## MVP
 
