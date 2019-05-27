@@ -1,5 +1,6 @@
 # Guess You?
-https://guess-who-game.herokuapp.com/
+
+<https://guess-who-game.herokuapp.com/>
 
 ![Guess You? - Welcome Page](images/guess_you_welcome.png)
 
@@ -7,7 +8,7 @@ This is a full-stack JavaScript web application game based on the boardgames 'Gu
 
 ##### Built With
 
-The app was built with JavaScript as the main programming language, MongoDB and Express using PubSub pattern. 
+The app was built with JavaScript as the main programming language, MongoDB and Express using PubSub pattern.
 
 ![Guess You? - Main View](images/guess_you_running_game.png)
 
@@ -72,7 +73,7 @@ Third, install Express is a minimal and flexible Node.js web application framewo
 ```
 npm install express --save
 
-nnpm install --save-dev nodemon
+npm install --save-dev nodemon
 
 npm install body-parser
 ```
